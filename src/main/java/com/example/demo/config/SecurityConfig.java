@@ -41,7 +41,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter{
 				.antMatchers("/css/**").permitAll()// 인가 처리
 				.antMatchers("/js/**").permitAll()// 인가 처리
 				.antMatchers("/image/**").permitAll()// 인가 처리
-				.antMatchers("/","/public","/join","/th/3ice/Login").permitAll()
+				.antMatchers("/","/public","/th/3ice/join","/th/3ice/login","/sms/send").permitAll()
 																				// hasRole을 사용시 기본적으로 Role_ 이 제공된다
 				.antMatchers("/user").hasRole("User")							// Role_User	
 				.antMatchers("/member").hasRole("Member")						// Role_Member
@@ -77,36 +77,9 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter{
 		// auth.userDetailsService : DB 연결할때 사용되는 함수
 		
 		auth.userDetailsService(PrincipalDetailService).passwordEncoder(passwordEncoder);
-//		
-//		auth
-//			.inMemoryAuthentication()
-//				.withUser("user")
-//				.password(passwordEncoder.encode("1234"))
-//				.roles("User");
-//						
-//		auth
-//		.inMemoryAuthentication()
-//			.withUser("member")
-//			.password(passwordEncoder.encode("1234"))
-//			.roles("Member");
-//		
-//		auth
-//		.inMemoryAuthentication()
-//			.withUser("admin")
-//			.password(passwordEncoder.encode("1234"))
-//			.roles("Admin");
+
 		
 	}
-	
-	
-	
-	// BCryptPasswordEncoder	: 비밀번호를 암호화 시키는 작업
-
-//	@Bean
-//	public PasswordEncoder passwordEncoder()
-//	{
-//		return new BCryptPasswordEncoder();
-//	}
 
 
 }

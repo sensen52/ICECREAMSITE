@@ -20,7 +20,7 @@ public class CustomAccessDeniedHandler implements AccessDeniedHandler{
 		System.out.println("권한 없음! : " +accessDeniedException.getMessage());
 		
 		request.setAttribute("msg", accessDeniedException.getMessage());
-		request.getRequestDispatcher("/error").forward(request, response);
+		request.getRequestDispatcher("/th/3ice/login").forward(request, response);
 	}
 
 }

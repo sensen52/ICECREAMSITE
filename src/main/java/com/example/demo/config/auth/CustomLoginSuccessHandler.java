@@ -39,11 +39,11 @@ public class CustomLoginSuccessHandler implements AuthenticationSuccessHandler {
 			}else if(role_str.equals("ROLE_Member"))
 			{
 				System.out.println("Member 페이지로 이동!");
-				response.sendRedirect(request.getContextPath()+"/Main");
+				response.sendRedirect(request.getContextPath()+"/th/3ice/index");
 			}else if(role_str.equals("ROLE_Admin"))
 			{
 				System.out.println("Admin 페이지로 이동!");
-				response.sendRedirect(request.getContextPath()+"/Main");
+				response.sendRedirect(request.getContextPath()+"/th/3ice/index");
 			}
 			
 			} catch (IOException e) {
