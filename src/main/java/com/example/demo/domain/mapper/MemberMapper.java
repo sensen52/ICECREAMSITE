@@ -19,6 +19,12 @@ public interface MemberMapper{
 
 	@Select("select * from tbl_member where username = #{username}")
 	public MemberDto select(@Param("username") String username);
+
+	@Select("select * from tbl_member where phonenumber = #{phonenumber}")
+	public MemberDto selectPhone(@Param("phoneNumber") String phoneNumber);
+
+	@Select("select * from tbl_member where password = #{password}")
+	public MemberDto selectPass(@Param("cur_pass") String password);
 	
 	@Insert("insert into tbl_member values(#{username},#{password},#{name},#{birthday},#{phoneNumber},#{email},#{addr},#{role})")
 	public int insert(MemberDto dto);

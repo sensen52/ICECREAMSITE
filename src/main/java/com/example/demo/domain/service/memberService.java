@@ -18,6 +18,7 @@ public class memberService {
 
     }
 
+
     public void memberSearch(){
 
     }
@@ -29,4 +30,6 @@ public class memberService {
     public void memberUpdate(){
 
     }
+
+
 }
