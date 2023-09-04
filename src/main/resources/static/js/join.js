@@ -99,4 +99,33 @@ passwordConfirmInput.addEventListener("input", function(event) {
     }
 });
 
-//주소
+
+// 로그인 버튼
+const login_btn = document.querySelector(".logout");
+login_btn.addEventListener("click", function (event) {
+  event.preventDefault(); // 기본 동작인 페이지 이동을 막아줍니다.
+  axios.get("/th/3ice/login")
+      .then((response)=>{
+        if(response.status===200){
+          window.location="/th/3ice/login";
+        }
+      })
+      .catch(error=>{
+        console.log(error);
+      })
+});
+
+// 마이페이지 버튼
+const mypage_btn = document.querySelector(".mypage");
+mypage_btn.addEventListener("click", function (event) {
+  event.preventDefault(); // 기본 동작인 페이지 이동을 막아줍니다.
+  axios.get("/th/3ice/myPage")
+      .then((response)=>{
+        if(response.status===200){
+          window.location="/th/3ice/myPage";
+        }
+      })
+      .catch(error=>{
+        console.log(error);
+      })
+});
