@@ -1,0 +1,34 @@
+js 파일로 해당 로직으로 이동하게 만들기
+
+연결법
+
+------------ 꼭 필요한 부분 ----------------------
+axios 사용하기 위한 cdn !!!
+html 헤더 위에 바로 추가해주시면 됩니다!
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.5.0/axios.min.js" integrity="sha512-aoTNnqZcT8B4AmeCFmiSnDlc4Nj/KPaZyB5G7JnOnUEkdNpCZs1LCankiYi01sLTyWy+m2P+W4XM+BuQ3Q4/Dg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+url 경로 설정
+- axios 요청을 할때 어디로 보낼지 경로 설정
+	예시 : 회원가입 페이지로 이동시 url를 /th/3ice/join 이라고 적어놓고 해당 url 을 get,post,put,delete 가로안에 필수로 넣어주어야 한다
+
+- param(값) 을 전달해야 할때
+
+---------------- getMapping에 연결----------------
+axios.get()
+.then(()=>{})
+.catch(error=>{})
+
+---------------- postMapping에 연결----------------
+axios.post()
+.then(()=>{})
+.catch(error=>{})
+
+---------------- putMapping에 연결----------------
+axios.put()
+.then(()=>{})
+.catch(error=>{})
+
+---------------- deleteMapping에 연결----------------
+axios.delete()
+.then(()=>{})
+.catch(error=>{})
