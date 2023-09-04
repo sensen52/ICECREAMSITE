@@ -17,7 +17,10 @@ public class MemberDto{
 	private String username;
 	private String password;
 	private String name;
-	private String adr_addr;
+	private String birthday;
+	private String phoneNumber;
+	private String email;
+	private String addr;
 	private String role;
 
 

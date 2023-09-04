@@ -10,12 +10,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @RequestMapping("/th/3ice")
 public class LoginLogoutController {
 
-    @GetMapping("/index")
-    public void index(){
-
-        log.info("GET/th/3ice/index");
-    }
-
     @GetMapping("/login")
     public void login(){
         log.info("GET/th/3ice/login");

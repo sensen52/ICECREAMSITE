@@ -7,6 +7,3 @@ document.getElementById('login-btn').addEventListener('click', function(event) {
         event.preventDefault(); // Prevent form from submitting
     }
   });
-  document.getElementById('ad-button').addEventListener('click', function() {
-    window.location.href = '/카카오';
-  });

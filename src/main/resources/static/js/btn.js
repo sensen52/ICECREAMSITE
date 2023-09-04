@@ -42,4 +42,4 @@ const done_btn = document.getElementById("done");
 
 //------------회원탈퇴페이지 -----------------------------------------------
 // 탈퇴하기 버튼
-const del_btn = document.getElementById("withdraw_btn");
+const del_btn = document.querySelector(".withdraw-button");
