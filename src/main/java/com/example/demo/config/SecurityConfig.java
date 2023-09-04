@@ -25,7 +25,7 @@ import com.example.demo.config.auth.PrincipalDetailService;
 public class SecurityConfig extends WebSecurityConfigurerAdapter{
 
 	@Autowired
-	private PasswordEncoder passwordEncoder;
+	private BCryptPasswordEncoder passwordEncoder;
 	
 	@Autowired
 	private PrincipalDetailService PrincipalDetailService;
