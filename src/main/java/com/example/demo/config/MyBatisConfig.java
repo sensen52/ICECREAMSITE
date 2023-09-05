@@ -14,7 +14,8 @@ public class MyBatisConfig {
 
 	@Autowired
 	private DataSource dataSource;
-	
+
+
 	@Bean
 	public SqlSessionFactory sqlSessionFactory() throws Exception
 	{
