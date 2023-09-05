@@ -94,4 +94,3 @@ const toEventBtn_el = document.getElementById("toevent");
 toEventBtn_el.addEventListener("click", function () {
   window.scrollTo({ top: 2300, behavior: "smooth" });
 });
-

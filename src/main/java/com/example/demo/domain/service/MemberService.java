@@ -1,12 +1,17 @@
 package com.example.demo.domain.service;
 
+import com.example.demo.domain.dto.MemberDto;
 import com.example.demo.domain.mapper.MemberMapper;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
-public class memberService {
+@Slf4j
+public class MemberService {
 
     @Autowired
     private MemberMapper mapper;
@@ -27,9 +32,17 @@ public class memberService {
 
     }
 
-    public void memberUpdate(){
+    public int memberUpdate(MemberDto dto) throws Exception {
+        log.info("service 문제" + dto.toString());
+        return mapper.update(dto);
 
     }
+    public String getPasswordByUsername(String username) throws Exception {
+        return mapper.selectPassword(username);
+    }
+
+
+
 
 
 }

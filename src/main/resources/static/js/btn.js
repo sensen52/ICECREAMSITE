@@ -33,12 +33,12 @@ const update_btn = document.getElementById("update-btn");
 const delete_btn = document.getElementById("delete-btn");
 
 //--------------회원수정페이지----------------------------------------------
-// 휴대폰번호 인징
-const check_phone = document.getElementById("number");
-// 비밀번호 확인
-const check_pass = document.getElementById("check");
-// 확인하기 버튼
-const done_btn = document.getElementById("done");
+//// 휴대폰번호 인징
+//const check_phone = document.getElementById("number");
+//// 비밀번호 확인
+//const check_pass = document.getElementById("check");
+//// 확인하기 버튼
+//const done_btn = document.getElementById("done");
 
 //------------회원탈퇴페이지 -----------------------------------------------
 // 탈퇴하기 버튼
