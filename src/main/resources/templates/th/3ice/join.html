@@ -4,17 +4,17 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>베스킨라빈스</title>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.5.0/axios.min.js" integrity="sha512-aoTNnqZcT8B4AmeCFmiSnDlc4Nj/KPaZyB5G7JnOnUEkdNpCZs1LCankiYi01sLTyWy+m2P+W4XM+BuQ3Q4/Dg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <link rel="stylesheet" href="/css/join.css" />
     <link rel="stylesheet" href="/css/reset.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
     />
-    <link
+    <link/>
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
     />
-
     <!-- 다음 주소 api -->
     <script defer src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
     <script defer src="/js/addr.js"></script>
@@ -443,6 +443,8 @@
           <br />
         </div>
       </section>
+    <form class="joinform" action="/th/3ice/join" name="joinform" method="post">
+
       <section class="section-profile">
         <div class="profile-header">회원정보 입력</div>
         <hr class="jumper" />
@@ -451,8 +453,10 @@
             이름
             <input
               id="name"
+              name="name"
               type="text"
               class="styled-input"
+
               placeholder="이름"
             />
           </div>
@@ -460,21 +464,27 @@
             아이디
             <input
               id="username"
+              name="username"
               type="text"
               class="styled-input"
+
               placeholder="아이디"
             />
           </div>
           <br />
           <div class="styled-input-container">
             비밀번호
-            <input
+           <input
               id="password"
+              name="password"
               type="password"
               class="styled-input"
+
               placeholder="비밀번호"
             />
           </div>
+
+
           <div class="styled-input-container">
             비밀번호 확인
             <input
@@ -490,8 +500,10 @@
             생년월일
             <input
               id="birthdate"
+              name="birthday"
               type="text"
               class="styled-input"
+
               placeholder="생년월일"
             />
           </div>
@@ -500,9 +512,10 @@
             <div class="phone-box">
               <input
                 id="phoneNumber"
+                name="phoneNumber"
                 type="tel"
                 class="phone-input"
-                placeholder="휴대폰번호"
+                 placeholder="휴대폰번호"
               />
               <button
                 type="button"
@@ -516,6 +529,7 @@
         </div>
       </section>
 
+
       <section class="section-profile">
         <div class="profile-header">개인정보 입력</div>
         <hr class="jumper" />
@@ -523,7 +537,7 @@
           <div class="mail-container">
             이메일
             <div class="mail-box">
-              <input type="email" class="mail-input" placeholder="직접입력" />
+              <input type="text" name="email" class="mail-input" id="email-input" placeholder="직접입력" />
               &#64;
               <select class="mail-list" id="domain-list">
                 <option value="">직접입력</option>
@@ -533,16 +547,18 @@
                 <option value="nate.com">nate.com</option>
                 <option value="kakao.com">kakao.com</option>
               </select>
+              <input type="hidden" name="email" class="full-email"  />
             </div>
           </div>
         </div>
         <br />
         <div class="profile-input">
-          <div class="addr-container">
+           <div class="addr-container">
             <div class="addr">
               주소
               <label for="addr"></label>
-              <input type="text" id="addr" placeholder="우편번호" />
+              <input type="hidden" id="addr" name="addr" placeholder="주소" />
+              <input type="text" id="postNumber" name="postNumber" placeholder="우편번호" />
               <input
                 id="addr1"
                 type="button"
@@ -580,9 +596,9 @@
         <div class="warn-msg">
           * 마케팅 동의를 선택하지 않을 경우 혜택에서 제외될 수 있습니다.
         </div>
-        <div class="join-box">가입하기</div>
-      </section>
-
+        <button type="submit" id="btnJoin" class="join-box">가입하기</button>
+       </section>
+      </form>
 
       <!-- 김승훈작업공간 끝 -->
 
@@ -646,7 +662,6 @@
       referrerpolicy="no-referrer"
     ></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
-    <script src="/js/index.js"></script>
-    <script src="/js/join.js"></script>
+    <script src="/js/join.js"></script>    <script src="/js/index.js"></script>
   </body>
 </html>

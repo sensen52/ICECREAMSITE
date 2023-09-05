@@ -1,3 +1,8 @@
+
+	const baseURL = "http://localhost:8080/th/3ice/";
+	let pagePath = null;
+	let fullURL = null;
+
 //dropdown메뉴
 document.addEventListener("DOMContentLoaded", function () {
   var mainNavItems = document.querySelectorAll(".main_nav >li");

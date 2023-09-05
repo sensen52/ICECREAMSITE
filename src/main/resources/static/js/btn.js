@@ -24,6 +24,7 @@ const check_num = document.querySelector(".submit-phone");
 // 가입하기 버튼
 const join_btn = document.querySelector(".join-box");
 
+
 //---------------마이페이지-----------------------------------------------
 // 설정버튼
 const config_btn=document.querySelector(".settingshref");

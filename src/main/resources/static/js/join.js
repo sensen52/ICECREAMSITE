@@ -1,3 +1,8 @@
+/**@charset "UTF-8";
+ *
+ */
+
+
 const checkboxes = document.querySelectorAll('.checkcheck');
 const allCheck = document.querySelector('.allcheck'); // cb0 체크박스
 
@@ -100,3 +105,26 @@ passwordConfirmInput.addEventListener("input", function(event) {
 });
 
 //주소
+
+const btnJoin = document.getElementById("btnJoin");
+btnJoin.onclick = function () {
+    var postNumber = document.getElementById("postNumber").value;
+    var address = document.getElementById("address").value;
+    var extraAddress = document.getElementById("extraAddress").value;
+    var detailAddress = document.getElementById("detailAddress").value;
+
+    var fullAddress = postNumber + " " + address + " " + extraAddress + " " + detailAddress;
+
+    // 주소 정보를 hidden 필드에 설정
+    document.getElementById("addr").value = fullAddress;
+    console.log(fullAddress);
+
+    var emailInput = document.getElementById("email-input").value;
+    if (emailInput) { // 이메일 입력값이 비어있지 않은 경우에만 처리
+        var emailSelect = document.getElementById("domain-list").value;
+        var fullEmail = emailInput + "@" + emailSelect;
+
+        document.getElementById("email").value = fullEmail;
+        console.log(fullEmail);
+    }
+}

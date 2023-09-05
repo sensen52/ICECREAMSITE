@@ -20,7 +20,7 @@ public class PrincipalDetailService implements UserDetailsService {
 	public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
 		
 		MemberDto dto = mapper.select(username);
-		
+		System.out.println(dto);
 		if (dto == null) {
             throw new UsernameNotFoundException("User not found with username: " + username);
 		}

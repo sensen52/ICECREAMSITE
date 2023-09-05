@@ -18,7 +18,7 @@ public interface MemberMapper{
 	public List<MemberDto> selectAll();
 
 	@Select("select * from tbl_member where username = #{username}")
-	public MemberDto select(@Param("username") String username);
+	public MemberDto select(String username);
 	
 	@Insert("insert into tbl_member values(#{username},#{password},#{name},#{birthday},#{phoneNumber},#{email},#{addr},#{role})")
 	public int insert(MemberDto dto);
