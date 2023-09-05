@@ -1,30 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>베스킨라빈스</title>
-    <link rel="stylesheet" type="text/css" href="/css/style.css" />
-    <link rel="stylesheet" type="text/css" href="/css/reset.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
-    />
-  </head>
-  <body>
-    <div id="wrap">
-      <!-- 여기서부터  nav 끝날때 까지 복사 -->
-      <div class="scroll_btn">
-        <div class="scroll_img">
-          <div class="scroll_text">
-            <a href="javascript:void(0)" class="bt1" id="tomenu">MENU</a>
-            <a href="javascript:void(0)" class="bt2" id="toevent">EVENT</a>
-            <a href="javascript:void(0)" class="bt3" id="toinfo">STORE</a>
-            <a href="javascript:void(0)" class="bt4" id="totop">♥3ice♥</a>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>3ICE</title>
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.5.0/axios.min.js" integrity="sha512-aoTNnqZcT8B4AmeCFmiSnDlc4Nj/KPaZyB5G7JnOnUEkdNpCZs1LCankiYi01sLTyWy+m2P+W4XM+BuQ3Q4/Dg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <link rel="stylesheet" href="/css/style.css" />
+  <link rel="stylesheet" href="/css/reset.css" />
+  <link
+          rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+  />
+  <link
+          rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
+  />
+</head>
+<body>
+<div id="wrap">
+  <!-- 여기서부터  nav 끝날때 까지 복사 -->
+  <div class="scroll_btn">
+    <div class="scroll_img">
+      <div class="scroll_text">
+        <a href="javascript:void(0)" class="bt1" id="tomenu">MENU</a>
+        <a href="javascript:void(0)" class="bt2" id="toevent">EVENT</a>
+        <a href="javascript:void(0)" class="bt3" id="toinfo">STORE</a>
+        <a href="javascript:void(0)" class="bt4" id="totop">♥3ice♥</a>
+
+        <head>
+          <meta charset="UTF-8" />
+          <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+          <title>베스킨라빈스</title>
+          <link rel="stylesheet" type="text/css" href="/css/style.css" />
+          <link rel="stylesheet" type="text/css" href="/css/reset.css" />
+          <link
+                  rel="stylesheet"
+                  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+          />
+          <link
+                  rel="stylesheet"
+                  href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
+          />
+          <script>
+            function testSession() {
+               var id = "#{sessionScope['username']}";
+               alert(id);
+            }
+          </script>
+        </head>
+        <body>
+        <div id="wrap">
+          <!-- 여기서부터  nav 끝날때 까지 복사 -->
+          <div class="scroll_btn">
+            <div class="scroll_img">
+              <div class="scroll_text">
+                <a href="javascript:void(0)" class="bt1" id="tomenu">MENU</a>
+                <a href="javascript:void(0)" class="bt2" id="toevent">EVENT</a>
+                <a href="javascript:void(0)" class="bt3" id="toinfo">STORE</a>
+                <a href="javascript:void(0)" class="bt4" id="totop">♥3ice♥</a>
+              </div>
+              <img src="/image/ballown.png" alt="" />
+            </div>
+
           </div>
           <img src="/image/ballown.png" alt="" />
         </div>
@@ -68,23 +106,29 @@
           </ul>
 
           <h1 class="logo">
-            <a href="javascipt:;"
-              ><img src="/image/logo.png " alt="상단로고"
+            <a href="javascipt:;" id="logo"
+            ><img src="/image/logo.png " alt="상단로고"
             /></a>
           </h1>
 
           <ul class="head_right_icon">
-            <li>
-              <a href="javascript:;"><strong>3ICE</strong>님</a>
+            <li class="myPage">
+              <a id="myPage" href="javascipt:;"><strong>3ICE</strong>님</a>
+            </li>
+            <li class="login">
+              <a id="login" href="javascipt:;">로그인</a>
+            </li>
+            <li class="logout">
+              <a id="logout" href="javascipt:;">로그아웃</a>
             </li>
             <li class="basket_icon">
-              <a href="javascript:;"
-                ><img src="/image/basket_icon.png" alt="장바구니_아이콘"
+              <a href="javascript:;" id="shopping_basket"
+              ><img src="/image/basket_icon.png" alt="장바구니_아이콘"
               /></a>
             </li>
             <li class="search_icon">
               <a href="javascript:;"
-                ><img src="/image/search.png" alt="찾기_아이콘"
+              ><img src="/image/search.png" alt="찾기_아이콘"
               /></a>
             </li>
           </ul>
@@ -384,7 +428,7 @@
           <div class="recommand_txt">
             <div class="recommand_title">3<b>I</b><strong>menu</strong></div>
             <a href="javascript:;"
-              >전체보기 <i class="fa-solid fa-arrow-right"></i
+            >전체보기 <i class="fa-solid fa-arrow-right"></i
             ></a>
           </div>
 
@@ -408,7 +452,7 @@
                 <img src="/image/reco_3.png" alt="추천메뉴3" class="reco03" />
                 <img src="/image/arrow.png" alt="화살표" />
                 <span
-                  >특별한 날, 3ice와 함께 <br /><b>아이스크림 케이크</b></span
+                >특별한 날, 3ice와 함께 <br /><b>아이스크림 케이크</b></span
                 >
               </a>
             </div>
@@ -453,19 +497,19 @@
         <div class="boxalign">
           <div class="sns">
             <a href="javascript:;"
-              ><img src="/image/icon_blog.png" alt="페이스북"
+            ><img src="/image/icon_blog.png" alt="페이스북"
             /></a>
             <a href="javascript:;"
-              ><img src="/image/icon_instgram.png" alt="인스타그램"
+            ><img src="/image/icon_instgram.png" alt="인스타그램"
             /></a>
             <a href="javascript:;"
-              ><img src="/image/icon_twitter.png" alt="인스타그램"
+            ><img src="/image/icon_twitter.png" alt="인스타그램"
             /></a>
             <a href="javascript:;"
-              ><img src="/image/icon_youtube.png" alt="인스타그램"
+            ><img src="/image/icon_youtube.png" alt="인스타그램"
             /></a>
             <a href="javascript:;"
-              ><img src="/image/icon_facebook.png" alt="인스타그램"
+            ><img src="/image/icon_facebook.png" alt="인스타그램"
             /></a>
           </div>
 
@@ -475,8 +519,7 @@
             </a>
             <div>1661 - 5270</div>
           </div>
-          <a href="/th/3ice/join"><button class="registerb" type="button" id="registb">join</button></a>
-          <a href="/th/3ice/withdraw"><button class="withdrawb" type="button" id="withdrawb">join</button></a>
+
           <div class="footer_nav">
             <ul>
               <li><a href="javascript:;">이용약관</a></li>
@@ -502,13 +545,13 @@
       </footer>
     </div>
     <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.21/lodash.min.js"
-      integrity="sha512-WFN04846sdKMIP5LKNphMaWzU7YpMyCU245etK3g/2ARYbPK9Ub18eG+ljU96qKRCWh+quCY7yefSmlkQw1ANQ=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
+            src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.21/lodash.min.js"
+            integrity="sha512-WFN04846sdKMIP5LKNphMaWzU7YpMyCU245etK3g/2ARYbPK9Ub18eG+ljU96qKRCWh+quCY7yefSmlkQw1ANQ=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
     ></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
     <script src="/js/index.js"></script>
-    <script src="/js/indexbtn.js"></script>
-  </body>
+    <!--<script defer src="/js/btn.js"></script>-->
+</body>
 </html>

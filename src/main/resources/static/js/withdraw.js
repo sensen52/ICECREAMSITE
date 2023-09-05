@@ -90,6 +90,8 @@ searchItems.forEach((searchItem) => {
       searchPage.classList.add("active");
     });
   });
+
+
 });
 
 // 각 닫기 버튼에 클릭 이벤트 리스너 추가
@@ -119,6 +121,7 @@ withdrawReasonCheckbox.addEventListener("change", function () {
     textareaWrapper.style.display = "none";
   }
 });
+
 
 document.getElementById("withdrawbtn").addEventListener("click", function (event) {
     event.preventDefault();

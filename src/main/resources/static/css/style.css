@@ -1,5 +1,5 @@
-/*#wrap {
-}*/
+#wrap {
+}
 /* 여기서 부터 Main 전까지 복사 */
 .scroll_btn {
   z-index: 999;
@@ -78,6 +78,10 @@ h1.logo > a > img {
 }
 ul.head_right_icon {
   display: flex;
+}
+.logout {
+  margin-top: 15px;
+  font-size: 15px;
 }
 
 ul.head_right_icon > li + li {
@@ -746,3 +750,5 @@ footer {
 .close:hover {
   background-color: #eb6ea4c7;
 }
+
+

@@ -36,6 +36,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter{
 
 				.antMatchers("/", "/public", "/th/3ice/join", "/th/3ice/login", "/sms/send",
 						"/th/3ice/index","/th/3ice/myPage","/th/3ice/update","/th/3ice/passwordCheck").permitAll()
+						// hasRole을 사용시 기본적으로 Role_ 이 제공된다
 				.antMatchers("/user").hasRole("User")                            // Role_User
 				.antMatchers("/member").hasRole("Member")                        // Role_Member
 				.antMatchers("/admin").hasRole("Admin")                            // Role_Admin
