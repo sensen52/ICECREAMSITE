@@ -13,12 +13,12 @@ import org.springframework.web.servlet.ModelAndView;
 @RequestMapping("/th/3ice")
 public class LoginLogoutController {
 
-    @GetMapping("/join")
-    public void join() {
-
-        log.info("Get/th/3ice/join");
-
-    }
+//    @GetMapping("/join")
+//    public void join() {
+//
+//        log.info("Get/th/3ice/join");
+//
+//    }
 
     @GetMapping("/login")
     public void login(){

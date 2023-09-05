@@ -20,7 +20,8 @@ public class withdrawService {
     // 회원 가입하기
     @Autowired
     private MemberMapper mapper;
-    private final BCryptPasswordEncoder passwordEncoder;
+    @Autowired
+    private BCryptPasswordEncoder passwordEncoder;
 
     public int userJoin(MemberDto dto) throws Exception {
         String encryptedPassword = passwordEncoder.encode(dto.getPassword());

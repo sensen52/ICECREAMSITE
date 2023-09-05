@@ -1,4 +1,24 @@
+document.getElementById("withdrawbtn2").addEventListener("click", function () {
+    if (confirm("정말로 회원 탈퇴하시겠습니까?")) {
+        const username = document.querySelector('input[name="username"]').value;
 
+        axios.delete("/th2/3ice/withdraw2", {
+            params: {
+                username: username
+            }
+        })
+        .then(function (response) {
+            // 성공적으로 처리한 경우
+            console.log("회원 탈퇴 성공:", response.data);
+            // 추가 작업 또는 리디렉션을 수행할 수 있습니다.
+        })
+        .catch(function (error) {
+            // 오류 발생한 경우
+            console.error("회원 탈퇴 실패:", error);
+            // 오류 메시지를 표시하거나 다른 작업을 수행할 수 있습니다.
+        });
+    }
+});
 
 //dropdown메뉴
 document.addEventListener("DOMContentLoaded", function () {
@@ -123,20 +143,3 @@ withdrawReasonCheckbox.addEventListener("change", function () {
 });
 
 
-document.getElementById("withdrawbtn").addEventListener("click", function (event) {
-    event.preventDefault();
-    if (confirm("정말로 회원 탈퇴하시겠습니까?")) {
-            // DELETE 요청을 서버로 보냅니다.
-            const username = document.getElementById("username").value;
-            axios
-            .delete("/th/3ice/withdraw", { data: { username } })/
-                .then((response) => {
-                    // 회원 탈퇴가 성공한 경우 서버에서 반환하는 응답을 처리합니다.
-                    console.log("회원 탈퇴 성공:", response.data);
-                })
-                .catch((error) => {
-                    // 회원 탈퇴 실패 또는 오류가 발생한 경우 처리합니다.
-                    console.error("회원 탈퇴 실패:", error);
-                    alert("회원 탈퇴 실패. 다시 시도해주세요.");
-                });
-    }});

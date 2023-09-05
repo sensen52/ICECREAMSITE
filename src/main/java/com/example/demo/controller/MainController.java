@@ -14,29 +14,11 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
 import com.example.demo.domain.service.MemberService;
-import lombok.extern.slf4j.Slf4j;
-
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
-import org.springframework.security.crypto.bcrypt.BCrypt;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
-
-import org.springframework.http.ResponseEntity;
-
-import org.springframework.stereotype.Controller;
 import org.springframework.validation.BindingResult;
 import org.springframework.validation.FieldError;
-import org.springframework.web.bind.annotation.*;
-import org.springframework.web.servlet.mvc.support.RedirectAttributes;
-
 import javax.validation.Valid;
 import java.util.HashMap;
-import java.util.Map;
-
-import javax.servlet.http.HttpSession;
-import java.util.HashMap;
-
 import java.util.Map;
 
 @Controller
@@ -74,18 +56,23 @@ public class MainController {
     }
 
 
-    @GetMapping("/myPage")
-    public void myPage() {
-        log.info("Get/th/3ice/myPage");
-    }
+//    @GetMapping("/myPage")
+//    public void myPage() {
+//        log.info("Get/th/3ice/myPage");
+//    }
+//
+//
+
 
 
     @GetMapping("/update")
-    public void update() {
+    public void update(){
+
 
 
         log.info("Get/th/3ice/update");
     }
+
 
 
     @PostMapping("/passwordCheck")
@@ -96,7 +83,7 @@ public class MainController {
 
         Map<String, Object> response = new HashMap<>();
 
-        log.info(username + " " + password);
+        log.info(username+" "+password);
         try {
             String hashedPassword = memberService.getPasswordByUsername(username);
 
@@ -158,35 +145,53 @@ public class MainController {
             return new ResponseEntity<>(response, HttpStatus.INTERNAL_SERVER_ERROR);
         }
     }
-
-
-    @GetMapping("/withdraw")
-    public void withdrawPage() {
-        log.info("Get/th/3ice/withdraw");
-    }
-
-
-    @PostMapping("/withdraw")
-    public String withdraw() throws Exception {
-        // 사용자 아이디(username) 가져오기
-        Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
-        String username = authentication.getName();
-        log.info("username: " + username);
-        service.UserDelete(username);
-        // TODO: username을 사용하여 회원 탈퇴 처리 로직 수행
-
-        // 회원 탈퇴 후 로그아웃 처리 (선택적)
-        SecurityContextHolder.clearContext();
-
-        return "redirect:/logout"; // 로그아웃 페이지로 이동
-
-//        @GetMapping("/session-data-endpoint")
-//        public ResponseEntity<Map<String, Object>> getSessionData(HttpSession session) {
-//            Map<String, Object> sessionData = new HashMap<>();
-//            sessionData.put("username", session.getAttribute("username"));
-//            return ResponseEntity.ok(sessionData);
 //
-//        }
-    }
+//    @GetMapping("/withdraw2")
+//    public String userWithdraw1() {
+//        log.info("GET /th/3ice/withdraw2");
+//        return "th/3ice/withdraw2"; // JSP 파일의 경로와 이름을 반환합니다.
+//    }
+//
+//
+//    @ResponseBody
+//    @DeleteMapping("/withdraw2")
+//    public String Withdraw(String username) throws Exception {
+//        log.info("POST /Delete : " + username);
+//        service.UserDelete(username);
+//        return "index";
+//    }
+//
 
+
+//
+//    @GetMapping("/withdraw")
+//    public void withdrawPage() {
+//        log.info("Get/th/3ice/withdraw");
+//    }
+//
+//
+//
+//    @PostMapping("/withdraw")
+//    public String withdraw() throws Exception {
+//        // 사용자 아이디(username) 가져오기
+//        Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
+//        String username = authentication.getName();
+//        log.info("username: " + username);
+//        service.UserDelete(username);
+//        // TODO: username을 사용하여 회원 탈퇴 처리 로직 수행
+//
+//        // 회원 탈퇴 후 로그아웃 처리 (선택적)
+//        SecurityContextHolder.clearContext();
+//
+//        return "redirect:/logout"; // 로그아웃 페이지로 이동
+////
+////        @GetMapping("/session-data-endpoint")
+////        public ResponseEntity<Map<String, Object>> getSessionData (HttpSession session){
+////            Map<String, Object> sessionData = new HashMap<>();
+////            sessionData.put("username", session.getAttribute("username"));
+////            return ResponseEntity.ok(sessionData);
+////
+////        }
+//
+//    }
 }
