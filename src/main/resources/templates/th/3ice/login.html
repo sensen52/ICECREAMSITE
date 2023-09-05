@@ -6,6 +6,7 @@
     <title>베스킨라빈스</title>
     <link rel="stylesheet" type="text/css" href="/css/login.css" />
     <link rel="stylesheet" type="text/css" href="/css/reset.css" />
+
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
@@ -14,6 +15,10 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
     />
+      <script crossorigin="anonymous" defer
+              integrity="sha512-aoTNnqZcT8B4AmeCFmiSnDlc4Nj/KPaZyB5G7JnOnUEkdNpCZs1LCankiYi01sLTyWy+m2P+W4XM+BuQ3Q4/Dg=="
+              referrerpolicy="no-referrer" src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.5.0/axios.min.js"></script>
+      <script defer src="/js/btn.js"></script>
   </head>
   <body>
     <div id="wrap">
@@ -335,34 +340,43 @@
       <section class="login-box">
         <img src="/image/icenap.png" />
 
-        <form action="/login" method="post">
-          <h2>로그인</h2>
-          <input id="username" class="styled-input" type="text" />
-          <h2>비밀번호</h2>
-          <input id="password" class="styled-input" type="password" />
+          <div class="loginbox_buttons">
+              <form action="/th/3ice/login" method="post">
+                  <h2>로그인</h2>
+                  <input class="styled-input" id="username" type="text"/>
+                  <h2>비밀번호</h2>
+                  <div class="passw">
+                      <input class="styled-input" id="password" type="password"/>
 
-          <!-- Move these buttons inside the form too -->
-          <input
-            type="submit"
-            id="login-btn"
-            class="styled-button login-button"
-            value="로그인"
-          />
-          <a href="">
-            <button class="styled-button signup-button">회원가입</button>
-          </a>
-          <button class="styled-button kakao-login">카카오 로그인</button>
+                      <!-- Move these buttons inside the form too -->
+                      <input
+                              class="styled-button login-button"
+                              id="login-btn"
+                              type="submit"
+                              value="로그인"
+                      />
+                  </div>
+              </form>
 
-          <div class="button-group">
-            <a href="">
-              <button class="reset-button">아이디</button>
-            </a>
-            <span class="slash">/</span>
-            <a href="">
-              <button class="reset-button">비밀번호 찾기</button>
-            </a>
+              <div class="login_button_els">
+                  <a href="">
+                      <button class="styled-button signup-button" id="register">회원가입</button>
+                  </a>
+                  <a href="/oauth2/authorization/kakao">
+                      <button class="styled-button kakao-login" id="kakao-login">카카오 로그인</button>
+                  </a>
+
+                  <div class="button-group">
+                      <a href="">
+                          <button class="reset-button">아이디</button>
+                      </a>
+                      <span class="slash">/</span>
+                      <a href="">
+                          <button class="reset-button">비밀번호 찾기</button>
+                      </a>
+                  </div>
+              </div>
           </div>
-        </form>
       </section>
 
       <!-- footer 전체 다 복사 하면 됩니다 -->
@@ -424,7 +438,7 @@
       referrerpolicy="no-referrer"
     ></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
-    <script src="/js/index.js"></script>
     <script src="/js/login.js"></script>
+
   </body>
 </html>

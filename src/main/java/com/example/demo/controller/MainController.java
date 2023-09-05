@@ -15,10 +15,12 @@ public class MainController {
         log.info("Get/th/3ice/index");
     }
 
-    @GetMapping("/join")
-    public void join(){
-        log.info("Get/th/3ice/join");
-    }
+//    @GetMapping("/join")
+//    public void join(){
+//
+//        log.info("Get/th/3ice/join");
+//
+//    }
 
     @GetMapping("/myPage")
     public void myPage(){
