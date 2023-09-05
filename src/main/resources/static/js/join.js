@@ -122,22 +122,47 @@ mypage_btn.addEventListener("click", function (event) {
         })
 });
 
-// 주소 입력 및 이메일 합성
+//가입하기 버튼 클릭 시 axios 데이터 전송
 const btnJoin = document.getElementById("btnJoin");
 btnJoin.onclick = function () {
-    var postNumber = document.getElementById("postNumber").value;
+    //주소
+    var postNumber = document.getElementById("addr").value;
     var address = document.getElementById("address").value;
     var extraAddress = document.getElementById("extraAddress").value;
     var detailAddress = document.getElementById("detailAddress").value;
+    //기타 회워정보
+    var password = document.getElementById("password").value;
+    var username = document.getElementById("username").value;
+    var name = document.getElementById("name").value;
+    var birth = document.getElementById("birthdate").value;
+    var phoneNumber = document.getElementById("phoneNumber").value;
 
+    // 주소합병
     var fullAddress = postNumber + " " + address + " " + extraAddress + " " + detailAddress;
 
+    //이메일합병
     var emailInput = document.getElementById("email-input").value;
     if (emailInput) { // 이메일 입력값이 비어있지 않은 경우에만 처리
         var emailSelect = document.getElementById("domain-list").value;
         var fullEmail = emailInput + "@" + emailSelect;
-
-        document.getElementById("email").value = fullEmail;
-        console.log(fullEmail);
     }
+
+    // 요청 본문 데이터 객체 생성(db들어갈 내용과 같음)
+    const requestData = {
+    addr: fullAddress,
+       email: fullEmail,
+        password: password,
+        username: username,
+        name: name,
+        birthday: birth,
+        phoneNumber: phoneNumber
+    };
+
+    axios.post('/th/3ice/join', requestData) // 요청 본문에 데이터 객체 전달
+        .then(response => {
+            console.log(response.data);
+        })
+        .catch(error => {
+            console.error("Error sending data: ", error);
+        });
 }
