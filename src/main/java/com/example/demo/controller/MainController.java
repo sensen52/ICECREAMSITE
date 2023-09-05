@@ -54,10 +54,7 @@ public class MainController {
 //
 //    }
 
-    @GetMapping("/myPage")
-    public void myPage(){
-        log.info("Get/th/3ice/myPage");
-    }
+
 
     @GetMapping("/update")
     public void update(){
