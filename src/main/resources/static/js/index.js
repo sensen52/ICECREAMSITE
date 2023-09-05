@@ -95,6 +95,7 @@ toEventBtn_el.addEventListener("click", function () {
   window.scrollTo({ top: 2300, behavior: "smooth" });
 });
 
+
 //창열고 닫기 이벤트--------------------
 const closeItems = document.querySelectorAll(".close");
 const searchPages = document.querySelectorAll(".search_page");
@@ -119,3 +120,4 @@ closeItems.forEach((closeItem) => {
     });
   });
 });
+
