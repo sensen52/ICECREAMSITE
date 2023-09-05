@@ -280,6 +280,7 @@ nav ul.main_nav > li:nth-child(1) {
 .section1>.update_form>div>#check{
   margin-left: 10px;
   width: 90px;
+  cursor: pointer;
 }
 .section1>.update_form>div>#changed_pass{
   margin-left: 29px;
