@@ -33,12 +33,13 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter{
 				.antMatchers("/css/**").permitAll()// 인가 처리
 				.antMatchers("/js/**").permitAll()// 인가 처리
 				.antMatchers("/image/**").permitAll()// 인가 처리
-				.antMatchers("/th/3ice/join").permitAll()
-				.antMatchers("/", "/public", "/th/3ice/login", "/sms/send", "/th/kakao/**").permitAll()
+
+				.antMatchers("/", "/public", "/th/3ice/join", "/th/3ice/login", "/sms/send",
+						"/th/3ice/index","/th/3ice/myPage","/th/3ice/update","/th/3ice/passwordCheck",
 																				// hasRole을 사용시 기본적으로 Role_ 이 제공된다
-				.antMatchers("/user", "/th/3ice/index").hasRole("User")                            // Role_User
-				.antMatchers("/member", "/th/3ice/index").hasRole("Member")                        // Role_Member
-				.antMatchers("/admin", "/product", "/th/3ice/index").hasRole("Admin")                            // Role_Admin
+				.antMatchers("/user").hasRole("User")                            // Role_User
+				.antMatchers("/member").hasRole("Member")                        // Role_Member
+				.antMatchers("/admin").hasRole("Admin")                            // Role_Admin
 				.anyRequest().authenticated()									// 나머지 URL은 모두 인증작업이 완료된 이후 접근가능
 
 				.and()
@@ -47,6 +48,9 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter{
 				.loginPage("/th/3ice/login").permitAll()                        // 커스텀 로그인 페이지 설정
 				.successHandler(new CustomLoginSuccessHandler())				// 로그인시 역활에 따른 페이지 설정
 				.failureHandler(new CustomAuthenticationFailureHandler())		// 로그인 실패 예외처리
+
+				.and()
+				.oauth2Login()
 				
 				.and()
 				
@@ -61,9 +65,8 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter{
 				.authenticationEntryPoint(new CustomAuthenticationEntryPoint())	// 인증 실패 예외처리
 				.accessDeniedHandler(new CustomAccessDeniedHandler());			// 권한 실패 예외처리
 
-//				.and()
-//				.oauth2Login()
-//				.loginPage("/th/3ice/login").permitAll();
+
+
 //			http
 //				.addFilterBefore(null, null);
 	}

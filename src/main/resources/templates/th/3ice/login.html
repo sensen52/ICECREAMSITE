@@ -343,10 +343,10 @@
           <div class="loginbox_buttons">
               <form action="/th/3ice/login" method="post">
                   <h2>로그인</h2>
-                  <input class="styled-input" id="username" type="text"/>
+                  <input class="styled-input" id="username" type="text" name="username"/>
                   <h2>비밀번호</h2>
                   <div class="passw">
-                      <input class="styled-input" id="password" type="password"/>
+                      <input class="styled-input" id="password" type="password" name="password"/>
 
                       <!-- Move these buttons inside the form too -->
                       <input
@@ -362,7 +362,7 @@
                   <a href="">
                       <button class="styled-button signup-button" id="register">회원가입</button>
                   </a>
-                  <a href="/oauth2/authorization/kakao">
+                  <a href="">
                       <button class="styled-button kakao-login" id="kakao-login">카카오 로그인</button>
                   </a>
 

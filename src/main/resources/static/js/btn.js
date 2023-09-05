@@ -4,7 +4,11 @@ const logo_btn=document.querySelector(".logo");
 window.logo_btn = logo_btn;
 
 // 로그인 버튼
+const login_btn = document.querySelector(".login");
 
+// 로그아웃 버튼
+const logout_btn = document.querySelector(".logout");
+const myPage_btn = document.querySelector(".myPage");
 
 // 장바구니버튼
 const shopping_basket = document.querySelector(".basket_icon");
@@ -48,18 +52,13 @@ window.delete_btn = delete_btn;
 
 
 //--------------회원수정페이지----------------------------------------------
-// 휴대폰번호 인징
-const check_phone = document.getElementById("number");
-window.check_phone = check_phone;
 
-// 비밀번호 확인
-const check_pass = document.getElementById("check");
-window.check_pass = check_pass;
-
-// 확인하기 버튼
-const done_btn = document.getElementById("done");
-window.done_btn = done_btn;
-
+//// 휴대폰번호 인징
+//const check_phone = document.getElementById("number");
+//// 비밀번호 확인
+//const check_pass = document.getElementById("check");
+//// 확인하기 버튼
+//const done_btn = document.getElementById("done");
 
 //------------회원탈퇴페이지 -----------------------------------------------
 // 탈퇴하기 버튼

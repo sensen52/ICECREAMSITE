@@ -95,3 +95,91 @@ toEventBtn_el.addEventListener("click", function () {
   window.scrollTo({ top: 2300, behavior: "smooth" });
 });
 
+
+
+//창열고 닫기 이벤트--------------------
+const closeItems = document.querySelectorAll(".close");
+const searchPages = document.querySelectorAll(".search_page");
+const searchItems = document.querySelectorAll(".search_icon");
+
+// 각 검색 아이콘에 클릭 이벤트 리스너 추가
+searchItems.forEach((searchItem) => {
+  searchItem.addEventListener("click", function () {
+    // 각 해당 검색 페이지에 "active" 클래스 추가
+    searchPages.forEach((searchPage) => {
+      searchPage.classList.add("active");
+    });
+  });
+});
+
+// 각 닫기 버튼에 클릭 이벤트 리스너 추가
+closeItems.forEach((closeItem) => {
+  closeItem.addEventListener("click", function () {
+    // 각 해당 검색 페이지에서 "active" 클래스 제거
+    searchPages.forEach((searchPage) => {
+      searchPage.classList.remove("active");
+    });
+  });
+});
+
+
+
+// 로고 버튼
+const logo_btn=document.querySelector(".logo");
+logo_btn.addEventListener("click", function (event) {
+  event.preventDefault(); // 기본 동작인 페이지 이동을 막아줍니다.
+  axios.get("/th/3ice/index")
+      .then((response)=>{
+        if(response.status===200){
+          window.location="/th/3ice/index";
+        }
+      })
+      .catch(error=>{
+        console.log(error);
+      })
+});
+// 로그인 버튼
+const login_btn = document.querySelector(".login");
+login_btn.addEventListener("click", function (event) {
+  event.preventDefault(); // 기본 동작인 페이지 이동을 막아줍니다.
+  axios.get("/th/3ice/login")
+      .then((response)=>{
+        if(response.status===200){
+          window.location.replace("/th/3ice/login");
+        }
+      })
+      .catch(error=>{
+        console.log(error);
+      })
+});
+// 로그아웃 버튼
+const logout_btn = document.querySelector(".logout");
+logout_btn.addEventListener("click", function (event) {
+  event.preventDefault(); // 기본 동작인 페이지 이동을 막아줍니다.
+  axios.get("/th/3ice/index")
+      .then((response)=>{
+        if(response.status===200){
+          window.location.replace("/th/3ice/login");
+        }
+      })
+      .catch(error=>{
+        console.log(error);
+      })
+});
+const myPage_btn = document.querySelector(".myPage");
+  myPage_btn.addEventListener("click", function (event) {
+    event.preventDefault(); // 기본 동작인 페이지 이동을 막아줍니다.
+    axios.get("/th/3ice/myPage")
+        .then((response)=>{
+          if(response.status===200){
+            window.location.replace("/th/3ice/myPage");
+          }
+        })
+        .catch(error=>{
+          console.log(error);
+        })
+    });
+
+// 장바구니버튼
+const shopping_basket = document.querySelector(".basket_icon");
+

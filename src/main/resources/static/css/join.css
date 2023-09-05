@@ -33,7 +33,8 @@
     top: 70px;
     right: 23px;
   }
-  
+  .logout{font-size:15px;margin-right:10px;margin-left:5px;
+  margin-right:20px;}
   .scroll_text > .bt3 {
     font-family: "yg-jalnan";
     font-size: 20px;

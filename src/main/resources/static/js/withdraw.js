@@ -90,6 +90,8 @@ searchItems.forEach((searchItem) => {
       searchPage.classList.add("active");
     });
   });
+
+
 });
 
 // 각 닫기 버튼에 클릭 이벤트 리스너 추가
@@ -120,6 +122,7 @@ withdrawReasonCheckbox.addEventListener("change", function () {
   }
 });
 
+
 document.getElementById("withdrawbtn").addEventListener("click", function (event) {
     event.preventDefault();
     if (confirm("정말로 회원 탈퇴하시겠습니까?")) {
@@ -137,3 +140,5 @@ document.getElementById("withdrawbtn").addEventListener("click", function (event
                     alert("회원 탈퇴 실패. 다시 시도해주세요.");
                 });
     }});
+
+

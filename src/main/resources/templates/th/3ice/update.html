@@ -16,8 +16,10 @@
     href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
   />
 <!-- 다음 주소 api -->
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
   <script defer src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
   <script defer src="/js/addr.js"></script>
+
 </head>
 <body>
   <div id="wrap">
@@ -361,14 +363,16 @@
           </div>
           <div>
             <label for="cur_pass">기존 비밀번호</label>
-            <input type="text" id="cur_pass">
+            <input type="password" id="cur_pass">
             <input type="submit" value="확인" id="check">
           </div>
           <div>
             <label for="changed_pass">변경 비밀번호</label>
-            <input type="text" id="changed_pass">
+            <input type="password" id="changed_pass">
           </div>
+
         </div>
+      </div>
       
     </section>
 
@@ -399,7 +403,7 @@
             </div>
           
             <button id = "done">확인하기</button>
-          
+
       </div>
 
 
@@ -466,6 +470,7 @@
   ></script>
   <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
   <script src="/js/index.js"></script>
-  
+  <script src="/js/update.js"></script>
+
 </body>
 </html>
