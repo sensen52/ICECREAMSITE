@@ -20,10 +20,7 @@ public class MainController {
         log.info("Get/th/3ice/join");
     }
 
-    @GetMapping("/myPage")
-    public void myPage(){
-        log.info("Get/th/3ice/myPage");
-    }
+
 
     @GetMapping("/update")
     public void update(){

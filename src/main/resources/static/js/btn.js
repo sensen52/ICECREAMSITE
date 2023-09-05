@@ -3,7 +3,11 @@
 const logo_btn=document.querySelector(".logo");
 
 // 로그인 버튼
+const login_btn = document.querySelector(".login");
 
+// 로그아웃 버튼
+const logout_btn = document.querySelector(".logout");
+const myPage_btn = document.querySelector(".myPage");
 
 // 장바구니버튼
 const shopping_basket = document.querySelector(".basket_icon");
