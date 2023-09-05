@@ -28,6 +28,7 @@ public class CustomLoginSuccessHandler implements AuthenticationSuccessHandler {
 			System.out.println(role_str);
 			request.getSession().setAttribute("role", role_str);
 			request.getSession().setAttribute("username", member_id);
+			request.setAttribute("username1",member_id);
 			
 			
 			try {

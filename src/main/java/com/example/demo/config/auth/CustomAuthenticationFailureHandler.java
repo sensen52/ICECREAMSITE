@@ -1,13 +1,12 @@
 package com.example.demo.config.auth;
 
-import java.io.IOException;
+import org.springframework.security.core.AuthenticationException;
+import org.springframework.security.web.authentication.AuthenticationFailureHandler;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-
-import org.springframework.security.core.AuthenticationException;
-import org.springframework.security.web.authentication.AuthenticationFailureHandler;
+import java.io.IOException;
 
 public class CustomAuthenticationFailureHandler implements AuthenticationFailureHandler{
 
@@ -19,7 +18,7 @@ public class CustomAuthenticationFailureHandler implements AuthenticationFailure
 		
 		request.getSession().setAttribute("msg", "[SERVER ERROR]ID/PW를 확인해주세요.");
 //		request.getSession().setAttribute("msg", exception.getMessage());
-		response.sendRedirect(request.getContextPath()+"/th/3ice/login");
+		response.sendRedirect(request.getContextPath() + "/th/3ice/index");
 	}
 
 }

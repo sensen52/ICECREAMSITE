@@ -1,7 +1,6 @@
 package com.example.demo.C03KakaoAPI;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
-import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -10,15 +9,12 @@ import org.springframework.http.*;
 import org.springframework.stereotype.Controller;
 import org.springframework.util.LinkedMultiValueMap;
 import org.springframework.util.MultiValueMap;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.web.client.RestTemplate;
 
 import javax.servlet.http.HttpServletResponse;
-import java.io.IOException;
 
+@CrossOrigin(origins = "http://localhost:8080")
 @Controller
 @Slf4j
 @RequestMapping("/th/kakao")
@@ -26,9 +22,9 @@ public class C02KakaoLoginController {
 
     private final String Client_code = "d1c6d78de634feda6de63d2500b400c4";
 
-    private final String Redirect_url = "http://localhost:8082/th/kakao/callback";
+    private final String Redirect_url = "http://localhost:8080/th/kakao/callback";
 
-    private final String logoutRedirect_uri= "http://localhost:8082/th/kakao/login";
+    private final String logoutRedirect_uri = "http://localhost:8080/th/kakao/login";
 
 
 
@@ -73,7 +69,7 @@ public class C02KakaoLoginController {
         this.kakaoTokenResponse = resp;
 
 
-        return "redirect:/th/kakao/main";
+        return "redirect:/th/3ice/index";
     }
 
     @GetMapping("/main")

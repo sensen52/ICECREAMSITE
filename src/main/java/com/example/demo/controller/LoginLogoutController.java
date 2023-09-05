@@ -10,9 +10,17 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @RequestMapping("/th/3ice")
 public class LoginLogoutController {
 
+    @GetMapping("/join")
+    public void join() {
+
+        log.info("Get/th/3ice/join");
+
+    }
+
     @GetMapping("/login")
     public void login(){
         log.info("GET/th/3ice/login");
     }
+
 
 }

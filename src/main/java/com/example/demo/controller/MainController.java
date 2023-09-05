@@ -3,11 +3,15 @@ package com.example.demo.controller;
 import com.example.demo.domain.dto.MemberDto;
 import com.example.demo.domain.service.MemberService;
 import lombok.extern.slf4j.Slf4j;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.crypto.bcrypt.BCrypt;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+
+import org.springframework.http.ResponseEntity;
+
 import org.springframework.stereotype.Controller;
 import org.springframework.validation.BindingResult;
 import org.springframework.validation.FieldError;
@@ -15,6 +19,10 @@ import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import javax.validation.Valid;
+import java.util.HashMap;
+import java.util.Map;
+
+import javax.servlet.http.HttpSession;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -39,10 +47,12 @@ public class MainController {
         log.info("Get/th/3ice/index");
     }
 
-    @GetMapping("/join")
-    public void join(){
-        log.info("Get/th/3ice/join");
-    }
+//    @GetMapping("/join")
+//    public void join(){
+//
+//        log.info("Get/th/3ice/join");
+//
+//    }
 
     @GetMapping("/myPage")
     public void myPage(){
@@ -137,5 +147,11 @@ public class MainController {
         log.info("Get/th/3ice/withdraw");
     }
 
+    @GetMapping("/session-data-endpoint")
+    public ResponseEntity<Map<String, Object>> getSessionData(HttpSession session) {
+        Map<String, Object> sessionData = new HashMap<>();
+        sessionData.put("username", session.getAttribute("username"));
+        return ResponseEntity.ok(sessionData);
+    }
 
 }

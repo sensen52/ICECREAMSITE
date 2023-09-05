@@ -247,34 +247,59 @@ main h1 {
 }
 
 form h2 {
-  margin-top: 5px;
-  text-align: left;
-  margin-bottom: 9px;
   color: #eb6ea5;
   font-size: 15px;
   font-family: "yg-jalnan", sans-serif;
+  width: 300px;
+  margin: 5px auto 9px;
+  text-align: left;
 }
 .login-box form {
   text-align: center;
-  margin-left: 50px;
-  width: 400px;
-  padding: 50px 50px;
-  border-radius: 20px;
-  background-color: #ededed;
 }
 input#password {
-  margin-bottom: 50px;
+  margin-bottom: 30px;
+}
+.passw {
+  display: flex;
+  flex-direction: column;
+}
+
+.login_button_els {
+  display: flex;
+  flex-direction: column;
+}
+
+.styled-input:first-child {
+  margin-bottom: 20px;
+}
+.loginbox_buttons {
+  background-color: #eaeaea;
+  width: 550px;
+  height: 550px;
+  padding-top: 50px;
+  border-radius: 50px;
+}
+#username {
+  margin-bottom: 20px;
+}
+.login_button_els > a {
+  display: block;
+  margin: 0 auto;
+}
+.button-group {
+  text-align: center;
 }
 .styled-input {
   width: 300px;
   height: 50px;
   padding: 10px 20px;
-  margin-bottom: 15px;
   font-size: 15px;
   color: #eb6ea5;
   border: 1px solid;
   border-radius: 30px;
   font-family: "yg-jalnan", sans-serif;
+  margin: 0 auto;
 }
 /* 기본 버튼 스타일 */
 .styled-button {
