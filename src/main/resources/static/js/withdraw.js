@@ -1,4 +1,5 @@
 
+
 //dropdown메뉴
 document.addEventListener("DOMContentLoaded", function () {
   var mainNavItems = document.querySelectorAll(".main_nav >li");
@@ -120,3 +121,24 @@ withdrawReasonCheckbox.addEventListener("change", function () {
     textareaWrapper.style.display = "none";
   }
 });
+
+
+document.getElementById("withdrawbtn").addEventListener("click", function (event) {
+    event.preventDefault();
+    if (confirm("정말로 회원 탈퇴하시겠습니까?")) {
+            // DELETE 요청을 서버로 보냅니다.
+            const username = document.getElementById("username").value;
+            axios
+            .delete("/th/3ice/withdraw", { data: { username } })/
+                .then((response) => {
+                    // 회원 탈퇴가 성공한 경우 서버에서 반환하는 응답을 처리합니다.
+                    console.log("회원 탈퇴 성공:", response.data);
+                })
+                .catch((error) => {
+                    // 회원 탈퇴 실패 또는 오류가 발생한 경우 처리합니다.
+                    console.error("회원 탈퇴 실패:", error);
+                    alert("회원 탈퇴 실패. 다시 시도해주세요.");
+                });
+    }});
+
+
