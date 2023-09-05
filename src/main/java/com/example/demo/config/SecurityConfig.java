@@ -17,16 +17,16 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter{
 
 	@Autowired
 	private BCryptPasswordEncoder passwordEncoder;
-	
+
 	@Autowired
 	private PrincipalDetailService PrincipalDetailService;
-	
-	
+
+
 	@Override
 	protected void configure(HttpSecurity http) throws Exception {
-		
+
 		http.csrf().disable();													// 중간 공격을 맞아주는 설정
-		
+
 		http
 			.authorizeRequests()
 				.antMatchers("/favicon.ico").permitAll()
@@ -35,7 +35,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter{
 				.antMatchers("/image/**").permitAll()// 인가 처리
 
 				.antMatchers("/", "/public", "/th/3ice/join", "/th/3ice/login", "/sms/send",
-						"/th/3ice/index","/th/3ice/myPage","/th/3ice/update","/th/3ice/passwordCheck",
+						"/th/3ice/index","/th/3ice/myPage","/th/3ice/update","/th/3ice/passwordCheck").permitAll()
 																				// hasRole을 사용시 기본적으로 Role_ 이 제공된다
 				.antMatchers("/user").hasRole("User")                            // Role_User
 				.antMatchers("/member").hasRole("Member")                        // Role_Member
@@ -51,9 +51,9 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter{
 
 				.and()
 				.oauth2Login()
-				
+
 				.and()
-				
+
 				.logout()
 				.logoutUrl("/logout")
 				.permitAll()
@@ -74,7 +74,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter{
 	// 인증처리 함수
 	@Override
 	protected void configure(AuthenticationManagerBuilder auth) throws Exception {
-		
+
 		// auth.userDetailsService : DB 연결할때 사용되는 함수
 
 //		auth.userDetailsService(PrincipalDetailService).passwordEncoder(passwordEncoder);
@@ -96,7 +96,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter{
 				.withUser("admin")
 				.password(passwordEncoder.encode("1234"))
 				.roles("Admin");
-		
+
 	}
 
 
