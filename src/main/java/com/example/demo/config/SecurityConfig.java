@@ -79,26 +79,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter{
 
 		auth.userDetailsService(PrincipalDetailService).passwordEncoder(passwordEncoder);
 
-<<<<<<< HEAD
-//		auth
-//				.inMemoryAuthentication()
-//				.withUser("user")
-//				.password(passwordEncoder.encode("1234"))
-//				.roles("User");
-//
-//		auth
-//				.inMemoryAuthentication()
-//				.withUser("member")
-//				.password(passwordEncoder.encode("1234"))
-//				.roles("Member");
-//
-//		auth
-//				.inMemoryAuthentication()
-//				.withUser("admin")
-//				.password(passwordEncoder.encode("1234"))
-//				.roles("Admin");
-		
-=======
+
 		auth
 				.inMemoryAuthentication()
 				.withUser("user")
@@ -117,7 +98,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter{
 				.password(passwordEncoder.encode("1234"))
 				.roles("Admin");
 
->>>>>>> 1403e26b26878d1673b2fbb1b2e65e69b95f8d51
+
 	}
 
 

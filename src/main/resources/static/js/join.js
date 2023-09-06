@@ -154,7 +154,18 @@ btnJoin.onclick = function () {
     var name = document.getElementById("name").value;
     var birth = document.getElementById("birthdate").value;
     var phoneNumber = document.getElementById("phoneNumber").value;
- // 입력 필드가 하나라도 비어있는지 확인
+
+
+    // 주소합병
+    var fullAddress = postNumber + " " + address + " " + extraAddress + " " + detailAddress;
+
+    //이메일합병
+    var emailInput = document.getElementById("email-input").value;
+    if (emailInput) { // 이메일 입력값이 비어있지 않은 경우에만 처리
+        var emailSelect = document.getElementById("domain-list").value;
+        var fullEmail = emailInput + "@" + emailSelect;
+    }
+// 입력 필드가 하나라도 비어있는지 확인
  if (
      !password ||
      !username ||
@@ -175,17 +186,6 @@ btnJoin.onclick = function () {
      alert("개인정보 필드를 입력하세요.");
      return; // 하나라도 비어있으면 가입을 막음
  }
-
-    // 주소합병
-    var fullAddress = postNumber + " " + address + " " + extraAddress + " " + detailAddress;
-
-    //이메일합병
-    var emailInput = document.getElementById("email-input").value;
-    if (emailInput) { // 이메일 입력값이 비어있지 않은 경우에만 처리
-        var emailSelect = document.getElementById("domain-list").value;
-        var fullEmail = emailInput + "@" + emailSelect;
-    }
-
     // 요청 본문 데이터 객체 생성(db들어갈 내용과 같음)
     const requestData = {
     addr: fullAddress,
