@@ -129,7 +129,7 @@ document.getElementById("withdrawbtn").addEventListener("click", function (event
             // DELETE 요청을 서버로 보냅니다.
             const username = document.getElementById("username").value;
             axios
-            .delete("/th/3ice/withdraw", { data: { username } })/
+            .delete("/th/3ice/withdraw", { data: { username } })
                 .then((response) => {
                     // 회원 탈퇴가 성공한 경우 서버에서 반환하는 응답을 처리합니다.
                     console.log("회원 탈퇴 성공:", response.data);
