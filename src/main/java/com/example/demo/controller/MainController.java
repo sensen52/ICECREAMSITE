@@ -2,7 +2,7 @@ package com.example.demo.controller;
 
 import com.example.demo.domain.dto.MemberDto;
 
-import com.example.demo.domain.service.withdrawService;
+
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -43,8 +43,8 @@ import java.util.Map;
 @Slf4j
 @RequestMapping("/th/3ice")
 public class MainController {
-    @Autowired
-    private withdrawService service;
+//    @Autowired
+////    private withdrawService service;
     @Autowired
     private BCryptPasswordEncoder passwordEncoder;
     @Autowired
@@ -66,12 +66,12 @@ public class MainController {
         log.info("Get/th/3ice/join");
     }
 
-    @PostMapping("/join")
-    public String join(@ModelAttribute MemberDto memberDto) throws Exception {
-        System.out.println("memberDto: " + memberDto);
-        service.userJoin(memberDto);
-        return "index";
-    }
+//    @PostMapping("/join")
+//    public String join(@ModelAttribute MemberDto memberDto) throws Exception {
+//        System.out.println("memberDto: " + memberDto);
+//        service.userJoin(memberDto);
+//        return "index";
+//    }
 
 
     @GetMapping("/myPage")
@@ -174,27 +174,29 @@ public class MainController {
 
 
 
-    @PostMapping("/withdraw")
-    public String withdraw() throws Exception{
-        // 사용자 아이디(username) 가져오기
-        Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
-        String username = authentication.getName();
-        log.info("username: " + username);
-        service.UserDelete(username);
-        // TODO: username을 사용하여 회원 탈퇴 처리 로직 수행
+//    @PostMapping("/withdraw")
+//    public String withdraw() throws Exception {
+//        // 사용자 아이디(username) 가져오기
+//        Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
+//        String username = authentication.getName();
+//        log.info("username: " + username);
+//        service.UserDelete(username);
+//        // TODO: username을 사용하여 회원 탈퇴 처리 로직 수행
+//
+//        // 회원 탈퇴 후 로그아웃 처리 (선택적)
+//        SecurityContextHolder.clearContext();
+//
+//        return "redirect:/logout"; // 로그아웃 페이지로 이동
+//    }
 
-        // 회원 탈퇴 후 로그아웃 처리 (선택적)
-        SecurityContextHolder.clearContext();
+//    @GetMapping("/session-data-endpoint")
+//    public ResponseEntity<Map<String, Object>> getSessionData(HttpSession session) {
+//        Map<String, Object> sessionData = new HashMap<>();
+//        sessionData.put("username", session.getAttribute("username"));
+//        return ResponseEntity.ok(sessionData);
+//    }
 
-        return "redirect:/logout"; // 로그아웃 페이지로 이동
 
-    @GetMapping("/session-data-endpoint")
-    public ResponseEntity<Map<String, Object>> getSessionData(HttpSession session) {
-        Map<String, Object> sessionData = new HashMap<>();
-        sessionData.put("username", session.getAttribute("username"));
-        return ResponseEntity.ok(sessionData);
-
-    }
 
 }
-g
+
