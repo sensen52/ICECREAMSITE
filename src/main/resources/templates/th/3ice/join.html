@@ -455,6 +455,7 @@
                 이름
                 <input
                         id="name"
+                        name="name"
                         type="text"
                         class="styled-input"
                         placeholder="이름"
@@ -465,6 +466,7 @@
                 <input
                         id="username"
                         type="text"
+                        name="username"
                         class="styled-input"
                         placeholder="아이디"
                 />
@@ -475,6 +477,7 @@
                 <input
                         id="password"
                         type="password"
+                        name="password"
                         class="styled-input"
                         placeholder="비밀번호"
                 />
@@ -487,6 +490,7 @@
                         type="password"
                         class="styled-input"
                         placeholder="비밀번호"
+                        name="password"
                 />
             </div>
             <p id="message"></p>
@@ -497,6 +501,7 @@
                 <input
                         id="birthdate"
                         type="text"
+                        name="birth"
                         class="styled-input"
                         placeholder="생년월일"
                 />
@@ -507,6 +512,7 @@
                     <input
                             id="phoneNumber"
                             type="tel"
+                            name="phoneNumber"
                             class="phone-input"
                             placeholder="휴대폰번호"
                     />
@@ -548,7 +554,8 @@
                 <div class="addr">
                     주소
                     <label for="addr"></label>
-                    <input type="text" id="addr" placeholder="우편번호"/>
+
+                    <input type="text" id="addr" name="postNumber" placeholder="우편번호" />
                     <input
                             id="addr1"
                             type="button"
@@ -570,6 +577,7 @@
                     <input type="text" id="detailAddress" placeholder="상세주소"/>
                     <input type="text" id="extraAddress" placeholder="참고항목"/>
                 </div>
+
             </div>
         </div>
     </section>
@@ -655,7 +663,7 @@
         referrerpolicy="no-referrer"
 ></script>
 <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
-<script src="/js/index.js"></script>
+<!--<script src="/js/index.js"></script>-->
 <script src="/js/join.js"></script>
 </body>
 </html>
