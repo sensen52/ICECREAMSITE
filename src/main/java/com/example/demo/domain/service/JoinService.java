@@ -22,6 +22,9 @@ public class JoinService {
     public int memberJoin(MemberDto dto) {
         String encryptedPassword = passwordEncoder.encode(dto.getPassword());
         dto.setPassword(encryptedPassword);
+
+
+        dto.setRole("ROLE_MEMBER");
         return mapper.insert(dto); // 데이터베이스에 저장 후 결과 반환
 
 
