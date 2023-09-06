@@ -161,8 +161,10 @@ btnJoin.onclick = function () {
     axios.post('/th/3ice/join', requestData) // 요청 본문에 데이터 객체 전달
         .then(response => {
             console.log(response.data);
+            window.location.href='/th/3ice/index';
         })
         .catch(error => {
             console.error("Error sending data: ", error);
+            window.location.href='/th/3ice/join';
         });
 }
