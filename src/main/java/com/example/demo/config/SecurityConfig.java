@@ -17,16 +17,16 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter{
 
 	@Autowired
 	private BCryptPasswordEncoder passwordEncoder;
-	
+
 	@Autowired
 	private PrincipalDetailService PrincipalDetailService;
-	
-	
+
+
 	@Override
 	protected void configure(HttpSecurity http) throws Exception {
-		
+
 		http.csrf().disable();													// 중간 공격을 맞아주는 설정
-		
+
 		http
 			.authorizeRequests()
 //				.antMatchers("/favicon.ico").permitAll()
@@ -51,9 +51,9 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter{
 
 				.and()
 				.oauth2Login()
-				
+
 				.and()
-				
+
 				.logout()
 				.logoutUrl("/logout")
 				.permitAll()
@@ -74,11 +74,12 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter{
 	// 인증처리 함수
 	@Override
 	protected void configure(AuthenticationManagerBuilder auth) throws Exception {
-		
+
 		// auth.userDetailsService : DB 연결할때 사용되는 함수
 
 		auth.userDetailsService(PrincipalDetailService).passwordEncoder(passwordEncoder);
 
+<<<<<<< HEAD
 //		auth
 //				.inMemoryAuthentication()
 //				.withUser("user")
@@ -97,6 +98,26 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter{
 //				.password(passwordEncoder.encode("1234"))
 //				.roles("Admin");
 		
+=======
+		auth
+				.inMemoryAuthentication()
+				.withUser("user")
+				.password(passwordEncoder.encode("1234"))
+				.roles("User");
+
+		auth
+				.inMemoryAuthentication()
+				.withUser("member")
+				.password(passwordEncoder.encode("1234"))
+				.roles("Member");
+
+		auth
+				.inMemoryAuthentication()
+				.withUser("admin")
+				.password(passwordEncoder.encode("1234"))
+				.roles("Admin");
+
+>>>>>>> 1403e26b26878d1673b2fbb1b2e65e69b95f8d51
 	}
 
 
