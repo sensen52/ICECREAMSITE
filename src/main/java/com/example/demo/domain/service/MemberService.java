@@ -19,10 +19,6 @@ public class MemberService {
     @Autowired
     private BCryptPasswordEncoder passwordEncoder;
 
-    public void memberjoin(){
-
-    }
-
 
     public void memberSearch(){
 

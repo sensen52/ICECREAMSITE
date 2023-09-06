@@ -1,6 +1,7 @@
 package com.example.demo.controller;
 
 import com.example.demo.domain.dto.MemberDto;
+
 import com.example.demo.domain.service.MemberService;
 import lombok.extern.slf4j.Slf4j;
 
@@ -31,6 +32,9 @@ import java.util.Map;
 @RequestMapping("/th/3ice")
 public class MainController {
 
+//    @Autowired
+////    private withdrawService service;
+
     @Autowired
     private BCryptPasswordEncoder passwordEncoder;
 
@@ -47,17 +51,16 @@ public class MainController {
         log.info("Get/th/3ice/index");
     }
 
-//    @GetMapping("/join")
-//    public void join(){
-//
-//        log.info("Get/th/3ice/join");
-//
-//    }
 
-//    @GetMapping("/myPage")
-//    public void myPage(){
-//        log.info("Get/th/3ice/myPage");
-//    }
+    @GetMapping("/join")
+    public void join() {
+        log.info("Get/th/3ice/join");
+    }
+
+    @GetMapping("/myPage")
+    public void myPage() {
+        log.info("Get/th/3ice/myPage");
+    }
 
     @GetMapping("/update")
     public void update(){
@@ -147,6 +150,7 @@ public class MainController {
         log.info("Get/th/3ice/withdraw");
     }
 
+
     @GetMapping("/session-data-endpoint")
     public ResponseEntity<Map<String, Object>> getSessionData(HttpSession session) {
         Map<String, Object> sessionData = new HashMap<>();
@@ -155,3 +159,33 @@ public class MainController {
     }
 
 }
+
+
+
+//    @PostMapping("/withdraw")
+//    public String withdraw() throws Exception {
+//        // 사용자 아이디(username) 가져오기
+//        Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
+//        String username = authentication.getName();
+//        log.info("username: " + username);
+//        service.UserDelete(username);
+//        // TODO: username을 사용하여 회원 탈퇴 처리 로직 수행
+//
+//        // 회원 탈퇴 후 로그아웃 처리 (선택적)
+//        SecurityContextHolder.clearContext();
+//
+//        return "redirect:/logout"; // 로그아웃 페이지로 이동
+//    }
+
+//    @GetMapping("/session-data-endpoint")
+//    public ResponseEntity<Map<String, Object>> getSessionData(HttpSession session) {
+//        Map<String, Object> sessionData = new HashMap<>();
+//        sessionData.put("username", session.getAttribute("username"));
+//        return ResponseEntity.ok(sessionData);
+//    }
+
+
+
+}
+
+

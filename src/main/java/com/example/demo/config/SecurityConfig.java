@@ -29,7 +29,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter{
 		
 		http
 			.authorizeRequests()
-				.antMatchers("/favicon.ico").permitAll()
+//				.antMatchers("/favicon.ico").permitAll()
 				.antMatchers("/css/**").permitAll()// 인가 처리
 				.antMatchers("/js/**").permitAll()// 인가 처리
 				.antMatchers("/image/**").permitAll()// 인가 처리
@@ -77,25 +77,25 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter{
 		
 		// auth.userDetailsService : DB 연결할때 사용되는 함수
 
-//		auth.userDetailsService(PrincipalDetailService).passwordEncoder(passwordEncoder);
+		auth.userDetailsService(PrincipalDetailService).passwordEncoder(passwordEncoder);
 
-		auth
-				.inMemoryAuthentication()
-				.withUser("user")
-				.password(passwordEncoder.encode("1234"))
-				.roles("User");
-
-		auth
-				.inMemoryAuthentication()
-				.withUser("member")
-				.password(passwordEncoder.encode("1234"))
-				.roles("Member");
-
-		auth
-				.inMemoryAuthentication()
-				.withUser("admin")
-				.password(passwordEncoder.encode("1234"))
-				.roles("Admin");
+//		auth
+//				.inMemoryAuthentication()
+//				.withUser("user")
+//				.password(passwordEncoder.encode("1234"))
+//				.roles("User");
+//
+//		auth
+//				.inMemoryAuthentication()
+//				.withUser("member")
+//				.password(passwordEncoder.encode("1234"))
+//				.roles("Member");
+//
+//		auth
+//				.inMemoryAuthentication()
+//				.withUser("admin")
+//				.password(passwordEncoder.encode("1234"))
+//				.roles("Admin");
 		
 	}
 
