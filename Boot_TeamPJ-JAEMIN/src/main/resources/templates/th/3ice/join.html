@@ -1,0 +1,652 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>베스킨라빈스</title>
+    <link rel="stylesheet" href="/css/join.css" />
+    <link rel="stylesheet" href="/css/reset.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
+    />
+
+    <!-- 다음 주소 api -->
+    <script defer src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
+    <script defer src="/js/addr.js"></script>
+
+  </head>
+
+  <body>
+    <div id="wrap">
+      <!-- 여기서부터  nav 끝날때 까지 복사 -->
+      <div class="scroll_btn">
+        <div class="scroll_img">
+          <div class="scroll_text">
+            <a href="javascript:void(0)" class="bt1" id="tomenu">MENU</a>
+            <a href="javascript:void(0)" class="bt2" id="toevent">EVENT</a>
+            <a href="javascript:void(0)" class="bt3" id="toinfo">STORE</a>
+            <a href="javascript:void(0)" class="bt4" id="totop">BASKIN</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="search_page">
+        <input placeholder="매장 또는 메뉴정보를 검색할 수 있습니다" />
+        <button class="search01">검색하기</button>
+        <button class="close">&times;</button>
+      </div>
+
+      <header>
+        <div class="boxalign">
+          <ul class="head_left_icon">
+            <li>
+              <a href="javascript:;">
+                <img src="/image/icon_instgram.png" alt="아이콘_인스타그램" />
+              </a>
+            </li>
+            <li>
+              <a href="javascript:;">
+                <img src="/image/icon_facebook.png" alt="아이콘_페이스북" />
+              </a>
+            </li>
+            <li>
+              <a href="javascript:;">
+                <img src="/image/icon_blog.png" alt="아이콘_블로그" />
+              </a>
+            </li>
+            <li>
+              <a href="javascript:;">
+                <img src="/image/icon_youtube.png" alt="아이콘_유튜브" />
+              </a>
+            </li>
+
+            <li>
+              <a href="javascript:;">
+                <img src="/image/icon_twitter.png" alt="아이콘_트위터" />
+              </a>
+            </li>
+          </ul>
+
+          <h1 class="logo">
+            <a href="javascipt:;"
+              ><img src="/image/logo.png " alt="상단로고"
+            /></a>
+          </h1>
+
+          <ul class="head_right_icon">
+            <li>
+              <a href="javascript:;"><strong>3ICE</strong>님</a>
+            </li>
+            <li class="basket_icon">
+              <a href="javascript:;"
+                ><img src="/image/basket_icon.png" alt="장바구니_아이콘"
+              /></a>
+            </li>
+            <li class="search_icon">
+              <a href="javascript:;"
+                ><img src="/image/search.png" alt="찾기_아이콘"
+              /></a>
+            </li>
+          </ul>
+        </div>
+      </header>
+
+      <nav>
+        <div class="boxalign" id="FIRST">
+          <ul class="main_nav">
+            <li>
+              <a href="#">BEST MONTH</a>
+              <div class="sub_nav">
+                <ul>
+                  <li>
+                    <a class="sub_nav_img" href="#"></a>
+                  </li>
+                  <li>
+                    <a href="#">아이스크림</a>
+                    <div class="sub_nav_sub">
+                      <ul>
+                        <li><a href="#">케이크</a></li>
+                        <li><a href="#">음료</a></li>
+                        <li><a href="#">커피</a></li>
+                        <li><a href="#">디저트</a></li>
+                      </ul>
+                    </div>
+                  </li>
+                  <li>
+                    <a href="#">진행이벤트</a>
+                    <div class="sub_nav_sub">
+                      <ul>
+                        <li><a href="#">당첨자발표</a></li>
+                      </ul>
+                    </div>
+                  </li>
+                  <li>
+                    <a href="#">매장찾기</a>
+                    <div class="sub_nav_sub">
+                      <ul>
+                        <li><a href="#">고객센터</a></li>
+                        <li><a href="#">단체주문</a></li>
+                      </ul>
+                    </div>
+                  </li>
+                  <li>
+                    <a href="#">공지사항</a>
+                    <div class="sub_nav_sub">
+                      <ul>
+                        <li><a href="#">보도자료</a></li>
+                        <li><a href="#">채용정보</a></li>
+                        <li><a href="#">점포개설문의</a></li>
+                      </ul>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li>
+              <a href="#">MENU</a>
+              <div class="sub_nav">
+                <ul>
+                  <li>
+                    <a class="sub_nav_img" href="#"></a>
+                  </li>
+                  <li>
+                    <a href="#">아이스크림</a>
+                    <div class="sub_nav_sub">
+                      <ul>
+                        <li><a href="#">케이크</a></li>
+                        <li><a href="#">음료</a></li>
+                        <li><a href="#">커피</a></li>
+                        <li><a href="#">디저트</a></li>
+                      </ul>
+                    </div>
+                  </li>
+                  <li>
+                    <a href="#">진행이벤트</a>
+                    <div class="sub_nav_sub">
+                      <ul>
+                        <li><a href="#">당첨자발표</a></li>
+                      </ul>
+                    </div>
+                  </li>
+                  <li>
+                    <a href="#">매장찾기</a>
+                    <div class="sub_nav_sub">
+                      <ul>
+                        <li><a href="#">고객센터</a></li>
+                        <li><a href="#">단체주문</a></li>
+                      </ul>
+                    </div>
+                  </li>
+                  <li>
+                    <a href="#">공지사항</a>
+                    <div class="sub_nav_sub">
+                      <ul>
+                        <li><a href="#">보도자료</a></li>
+                        <li><a href="#">채용정보</a></li>
+                        <li><a href="#">점포개설문의</a></li>
+                      </ul>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li>
+              <a href="#">EVENT</a>
+              <div class="sub_nav">
+                <ul>
+                  <li>
+                    <a class="sub_nav_img" href="#"></a>
+                  </li>
+                  <li>
+                    <a href="#">아이스크림</a>
+                    <div class="sub_nav_sub">
+                      <ul>
+                        <li><a href="#">케이크</a></li>
+                        <li><a href="#">음료</a></li>
+                        <li><a href="#">커피</a></li>
+                        <li><a href="#">디저트</a></li>
+                      </ul>
+                    </div>
+                  </li>
+                  <li>
+                    <a href="#">진행이벤트</a>
+                    <div class="sub_nav_sub">
+                      <ul>
+                        <li><a href="#">당첨자발표</a></li>
+                      </ul>
+                    </div>
+                  </li>
+                  <li>
+                    <a href="#">매장찾기</a>
+                    <div class="sub_nav_sub">
+                      <ul>
+                        <li><a href="#">고객센터</a></li>
+                        <li><a href="#">단체주문</a></li>
+                      </ul>
+                    </div>
+                  </li>
+                  <li>
+                    <a href="#">공지사항</a>
+                    <div class="sub_nav_sub">
+                      <ul>
+                        <li><a href="#">보도자료</a></li>
+                        <li><a href="#">채용정보</a></li>
+                        <li><a href="#">점포개설문의</a></li>
+                      </ul>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li>
+              <a href="#">STORE</a>
+              <div class="sub_nav">
+                <ul>
+                  <li>
+                    <a class="sub_nav_img" href="#"></a>
+                  </li>
+                  <li>
+                    <a href="#">아이스크림</a>
+                    <div class="sub_nav_sub">
+                      <ul>
+                        <li><a href="#">케이크</a></li>
+                        <li><a href="#">음료</a></li>
+                        <li><a href="#">커피</a></li>
+                        <li><a href="#">디저트</a></li>
+                      </ul>
+                    </div>
+                  </li>
+                  <li>
+                    <a href="#">진행이벤트</a>
+                    <div class="sub_nav_sub">
+                      <ul>
+                        <li><a href="#">당첨자발표</a></li>
+                      </ul>
+                    </div>
+                  </li>
+                  <li>
+                    <a href="#">매장찾기</a>
+                    <div class="sub_nav_sub">
+                      <ul>
+                        <li><a href="#">고객센터</a></li>
+                        <li><a href="#">단체주문</a></li>
+                      </ul>
+                    </div>
+                  </li>
+                  <li>
+                    <a href="#">공지사항</a>
+                    <div class="sub_nav_sub">
+                      <ul>
+                        <li><a href="#">보도자료</a></li>
+                        <li><a href="#">채용정보</a></li>
+                        <li><a href="#">점포개설문의</a></li>
+                      </ul>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li>
+              <a href="#">ABOUT</a>
+              <div class="sub_nav">
+                <ul>
+                  <li>
+                    <a class="sub_nav_img" href="#"></a>
+                  </li>
+                  <li>
+                    <a href="#">아이스크림</a>
+                    <div class="sub_nav_sub">
+                      <ul>
+                        <li><a href="#">케이크</a></li>
+                        <li><a href="#">음료</a></li>
+                        <li><a href="#">커피</a></li>
+                        <li><a href="#">디저트</a></li>
+                      </ul>
+                    </div>
+                  </li>
+                  <li>
+                    <a href="#">진행이벤트</a>
+                    <div class="sub_nav_sub">
+                      <ul>
+                        <li><a href="#">당첨자발표</a></li>
+                      </ul>
+                    </div>
+                  </li>
+                  <li>
+                    <a href="#">매장찾기</a>
+                    <div class="sub_nav_sub">
+                      <ul>
+                        <li><a href="#">고객센터</a></li>
+                        <li><a href="#">단체주문</a></li>
+                      </ul>
+                    </div>
+                  </li>
+                  <li>
+                    <a href="#">공지사항</a>
+                    <div class="sub_nav_sub">
+                      <ul>
+                        <li><a href="#">보도자료</a></li>
+                        <li><a href="#">채용정보</a></li>
+                        <li><a href="#">점포개설문의</a></li>
+                      </ul>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </nav>
+      <!-- 여기까지 복사 -->
+      <!-- 김승훈 작업공간 -->
+      <main>
+        <!-- 회원가입 헤더 -->
+        <div class="join-header">회원가입</div>
+        <!-- 회원가입 과정 -->
+      </main>
+      <section class="section-profile">
+        <div class="join-procedure">
+          <div class="p-box">
+            <div class="p-subbox1">
+              <img src="/image/profile.png" alt="" />
+            </div>
+            <div class="p-subbox2">본인인증</div>
+          </div>
+          <div class="p-line">
+            <hr />
+          </div>
+          <div class="p-box">
+            <div class="p-subbox1"><img src="/image/pen.png" alt="" /></div>
+            <div class="p-subbox2">정보입력</div>
+          </div>
+          <div class="p-line">
+            <hr />
+          </div>
+          <div class="p-box">
+            <div class="p-subbox1"><img src="/image/circle.png" alt="" /></div>
+            <div class="p-subbox2">가입완료</div>
+          </div>
+        </div>
+        <!-- 약관동의 체크박스 -->
+        <div class="agree">
+          <div class="agree-header">약관동의</div>
+          <div class="agree-check">
+            <div class="c-box">
+              <input type="checkbox" id="cb0" class="allcheck" />
+              <label for="cb0" class="custom-checkbox"> </label>
+              <span class="check-color"></span>전체약관동의
+            </div>
+            <hr />
+            <div class="c-box c-boxf">
+              <input type="checkbox" id="cb1" class="checkcheck" />
+              <label for="cb1" class="custom-checkbox"> </label
+              ><span class="check-color">[필수]</span>이용약관
+              <a
+                href="http://member2.gmarket.co.kr/TermsPolicy/BuyerTermsPolicy"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <div class="terms">내용보기</div>
+              </a>
+            </div>
+            <div class="c-box">
+              <input type="checkbox" id="cb2" class="checkcheck" /><label
+                for="cb2"
+                class="custom-checkbox"
+              ></label
+              ><span class="check-color">[필수]</span>개인정보 수집 이용동의<a
+                href="http://member2.gmarket.co.kr/TermsPolicy/FinanceTermsPolicy"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <div class="terms">내용보기</div>
+              </a>
+            </div>
+            <div class="c-box">
+              <input type="checkbox" id="cb3" class="checkcheck" /><label
+                for="cb3"
+                class="custom-checkbox"
+              ></label
+              ><span class="check-color">[필수]</span>카카오 이벤트 및 혜택
+              이용동의<a
+                href="http://member2.gmarket.co.kr/TermsPolicy/FinanceTermsPolicy"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <div class="terms">내용보기</div>
+              </a>
+            </div>
+            <div class="c-box">
+              <input type="checkbox" id="cb4" class="checkcheck2" /><label
+                for="cb4"
+                class="custom-checkbox"
+              ></label
+              ><span class="check-color">[선택]</span>맞춤 마케팅을 위한
+              정보수집,이용동의<a
+                href="http://member2.gmarket.co.kr/TermsPolicy/LocationInfoTermsPolicy"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <div class="terms">내용보기</div>
+              </a>
+            </div>
+          </div>
+          <div class="warn-msg">
+            * 필수 동의를 누르지 않을 경우 서비스 가입이 불가능해집니다.<br />*
+            마케팅 동의를 선택하지 않을 경우 혜택에서 제외될 수 있습니다.
+          </div>
+          <br />
+        </div>
+      </section>
+      <section class="section-profile">
+        <div class="profile-header">회원정보 입력</div>
+        <hr class="jumper" />
+        <div class="profile-input">
+          <div class="styled-input-container">
+            이름
+            <input
+              id="name"
+              type="text"
+              class="styled-input"
+              placeholder="이름"
+            />
+          </div>
+          <div class="styled-input-container">
+            아이디
+            <input
+              id="username"
+              type="text"
+              class="styled-input"
+              placeholder="아이디"
+            />
+          </div>
+          <br />
+          <div class="styled-input-container">
+            비밀번호
+            <input
+              id="password"
+              type="password"
+              class="styled-input"
+              placeholder="비밀번호"
+            />
+          </div>
+          <div class="styled-input-container">
+            비밀번호 확인
+            <input
+              id="passwordConfirm"
+              type="password"
+              class="styled-input"
+              placeholder="비밀번호"
+            />
+          </div>
+          <div class="word-pw">*^!를 제외한 특수문자는 사용할 수 없습니다.</div>
+          <br />
+          <div class="styled-input-container">
+            생년월일
+            <input
+              id="birthdate"
+              type="text"
+              class="styled-input"
+              placeholder="생년월일"
+            />
+          </div>
+          <div class="phone-container">
+            휴대폰번호
+            <div class="phone-box">
+              <input
+                id="phoneNumber"
+                type="tel"
+                class="phone-input"
+                placeholder="휴대폰번호"
+              />
+              <button
+                type="button"
+                class="submit-phone"
+                onclick="verifyPhoneNumber()"
+              >
+                인증
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-profile">
+        <div class="profile-header">개인정보 입력</div>
+        <hr class="jumper" />
+        <div class="profile-input">
+          <div class="mail-container">
+            이메일
+            <div class="mail-box">
+              <input type="email" class="mail-input" placeholder="직접입력" />
+              &#64;
+              <select class="mail-list" id="domain-list">
+                <option value="">직접입력</option>
+                <option value="naver.com">naver.com</option>
+                <option value="google.com">google.com</option>
+                <option value="hanmail.net">hanmail.net</option>
+                <option value="nate.com">nate.com</option>
+                <option value="kakao.com">kakao.com</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <br />
+        <div class="profile-input">
+          <div class="addr-container">
+            <div class="addr">
+              주소
+              <label for="addr"></label>
+              <input type="text" id="addr" placeholder="우편번호" />
+              <input
+                id="addr1"
+                type="button"
+                onclick="execDaumPostcode()"
+                value="우편번호 찾기"
+              />
+              <div id="layer" style="display:none;position:fixed;overflow:hidden;z-index:1;-webkit-overflow-scrolling:touch;">
+                <img src="//t1.daumcdn.net/postcode/resource/images/close.png" id="btnCloseLayer" style="cursor:pointer;position:absolute;right:-3px;top:-3px;z-index:1;width:20px;height:20px;" onclick="closeDaumPostcode()" alt="닫기 버튼">
+              </div>
+
+            </div>
+            <div class="address">
+              <input type="text" id="address" placeholder="주소" />
+            </div>
+            <div class="address">
+              <input type="text" id="detailAddress" placeholder="상세주소" />
+              <input type="text" id="extraAddress" placeholder="참고항목" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-profile">
+        <div class="profile-header">마케팅 정보 수신동의</div>
+        <div class="radio-box-container">
+          <div class="radio-box">
+            <input type="radio" name="marketing" id="sns" />
+            <label for="sns">SNS</label>
+            <input type="radio" name="marketing" id="email" />
+            <label for="email">이메일</label>
+            <input type="radio" name="marketing" id="phone" />
+            <label for="phone">전화번호</label>
+          </div>
+        </div>
+        <div class="warn-msg">
+          * 마케팅 동의를 선택하지 않을 경우 혜택에서 제외될 수 있습니다.
+        </div>
+        <div class="join-box">가입하기</div>
+      </section>
+
+
+      <!-- 김승훈작업공간 끝 -->
+
+      <!-- footer 전체 다 복사 하면 됩니다 -->
+      <footer>
+        <div class="boxalign">
+          <div class="sns">
+            <a href="javascript:;"
+              ><img src="/image/icon_blog.png" alt="페이스북"
+            /></a>
+            <a href="javascript:;"
+              ><img src="/image/icon_instgram.png" alt="인스타그램"
+            /></a>
+            <a href="javascript:;"
+              ><img src="/image/icon_twitter.png" alt="인스타그램"
+            /></a>
+            <a href="javascript:;"
+              ><img src="/image/icon_youtube.png" alt="인스타그램"
+            /></a>
+            <a href="javascript:;"
+              ><img src="/image/icon_facebook.png" alt="인스타그램"
+            /></a>
+          </div>
+
+          <div class="footer_logo">
+            <a href="javascript:;">
+              <img src="/image/logo.png" alt="하단로고" />
+            </a>
+            <div>1661 - 5270</div>
+          </div>
+
+          <div class="footer_nav">
+            <ul>
+              <li><a href="javascript:;">이용약관</a></li>
+              <li><a href="javascript:;">개인정보처리방침</a></li>
+              <li><a href="javascript:;">위치기반서비스</a></li>
+              <li><a href="javascript:;">고객센터</a></li>
+              <li><a href="javascript:;">인재채용</a></li>
+              <li><a href="javascript:;">단체주문</a></li>
+            </ul>
+          </div>
+
+          <div class="copyright">
+            <div>
+              주식회사 3ice는 통신판매중개자이며 통신판매의 당사자가 아닙니다.
+              따라서 상품/ 거래정보 및 거래와 관련하여 베스킨라빈스에 등록된
+              판매자의 고의 또는 과실로 소비자에게 발생하는 손해에 대해 3ice는
+              책임을 지지 않습니다. 상품 및 거래에 관하여 보다 정확한 정보는
+              해당 판매자에게 직접 확인하여 주시기 바랍니다.
+              <p>Copyright 3ice. All Rights Reserved.</p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.21/lodash.min.js"
+      integrity="sha512-WFN04846sdKMIP5LKNphMaWzU7YpMyCU245etK3g/2ARYbPK9Ub18eG+ljU96qKRCWh+quCY7yefSmlkQw1ANQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <script src="/js/index.js"></script>
+    <script src="/js/join.js"></script>
+  </body>
+</html>

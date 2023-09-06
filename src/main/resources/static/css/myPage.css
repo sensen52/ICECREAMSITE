@@ -640,7 +640,7 @@ footer {
   font-size: 20px;
 }
 
-.o_settingtitle > a {
+.o_settingtitle > div {
   display: flex;
   text-align: left;
   justify-content: space-between;
@@ -648,16 +648,17 @@ footer {
   height: 50px;
   align-items: center;
 }
-.o_settingtitle > a > span {
+.o_settingtitle > div > div {
   text-align: left;
   font-family: "Noto Sans KR", sans-serif;
 }
 
-.o_settingtitle > a:hover {
+.o_settingtitle > div:hover {
   color: #eb6ea5;
   font-weight: bold;
+  cursor: pointer;
 }
-.o_settingtitle > a > img {
+.o_settingtitle > div > img {
   display: block;
   width: 30px;
   height: 30px;

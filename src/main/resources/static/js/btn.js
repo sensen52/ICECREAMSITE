@@ -39,16 +39,16 @@ window.join_btn = join_btn;
 
 //---------------마이페이지-----------------------------------------------
 // 설정버튼
-const config_btn=document.querySelector(".settingshref");
-window.config_btn = config_btn;
+//const config_btn=document.querySelector(".settingshref");
+//window.config_btn = config_btn;
 
-// 회원수정
-const update_btn = document.getElementById("update-btn");
-window.update_btn = update_btn;
-
-// 회원삭제
-const delete_btn = document.getElementById("delete-btn");
-window.delete_btn = delete_btn;
+//// 회원수정
+//const update_btn = document.getElementById("update-btn");
+//window.update_btn = update_btn;
+//
+//// 회원삭제
+//const delete_btn = document.getElementById("delete-btn");
+//window.delete_btn = delete_btn;
 
 
 //--------------회원수정페이지----------------------------------------------

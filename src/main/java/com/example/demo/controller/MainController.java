@@ -2,17 +2,6 @@ package com.example.demo.controller;
 
 import com.example.demo.domain.dto.MemberDto;
 
-
-import lombok.extern.slf4j.Slf4j;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
-import org.springframework.security.core.Authentication;
-import org.springframework.security.core.context.SecurityContextHolder;
-
-import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.*;
-
 import com.example.demo.domain.service.MemberService;
 import lombok.extern.slf4j.Slf4j;
 
@@ -36,18 +25,19 @@ import java.util.Map;
 
 import javax.servlet.http.HttpSession;
 import java.util.HashMap;
-
 import java.util.Map;
 
 @Controller
 @Slf4j
 @RequestMapping("/th/3ice")
 public class MainController {
+
 //    @Autowired
 ////    private withdrawService service;
+
     @Autowired
     private BCryptPasswordEncoder passwordEncoder;
-    @Autowired
+
     private final MemberService memberService;
 
     @Autowired
@@ -57,35 +47,23 @@ public class MainController {
 
 
     @GetMapping("/index")
-    public void index() {
+    public void index(){
         log.info("Get/th/3ice/index");
     }
+
 
     @GetMapping("/join")
     public void join() {
         log.info("Get/th/3ice/join");
     }
 
-//    @PostMapping("/join")
-//    public String join(@ModelAttribute MemberDto memberDto) throws Exception {
-//        System.out.println("memberDto: " + memberDto);
-//        service.userJoin(memberDto);
-//        return "index";
-//    }
-
-
     @GetMapping("/myPage")
     public void myPage() {
         log.info("Get/th/3ice/myPage");
     }
 
-
-  
-
-
     @GetMapping("/update")
     public void update(){
-
 
 
         log.info("Get/th/3ice/update");
@@ -168,9 +146,19 @@ public class MainController {
 
 
     @GetMapping("/withdraw")
-    public void withdrawPage() {
+    public void withdraw(){
         log.info("Get/th/3ice/withdraw");
     }
+
+
+    @GetMapping("/session-data-endpoint")
+    public ResponseEntity<Map<String, Object>> getSessionData(HttpSession session) {
+        Map<String, Object> sessionData = new HashMap<>();
+        sessionData.put("username", session.getAttribute("username"));
+        return ResponseEntity.ok(sessionData);
+    }
+
+}
 
 
 
@@ -199,4 +187,5 @@ public class MainController {
 
 
 }
+
 

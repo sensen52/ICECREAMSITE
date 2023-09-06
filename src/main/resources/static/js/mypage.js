@@ -1,3 +1,28 @@
+
+const updateBtn = document.getElementById('update-btn');
+
+updateBtn.addEventListener('click', () => {
+    axios.get('http://localhost:8080/th/3ice/update')
+        .then(response => {
+            window.location.href = response.config.url;
+        })
+        .catch(error => {
+            console.error('에러 발생:', error);
+        });
+});
+
+const deleteButton = document.getElementById('delete-btn');
+deleteButton.addEventListener('click', () => {
+const url = 'http://localhost:8080/th/3ice/withdraw';
+axios.get(url)
+  .then(() => {
+    window.location.href = url;
+  })
+  .catch((error) => {
+    console.error('요청 실패:', error);
+});
+});
+
 //dropdown메뉴
 document.addEventListener("DOMContentLoaded", function () {
   var mainNavItems = document.querySelectorAll(".main_nav >li");
@@ -110,7 +135,6 @@ settingsItems.forEach((closeItem) => {
     });
   });
 });
-
 
 closeItems1.forEach((closeItem) => {
   closeItem.addEventListener("click", function () {

@@ -1,0 +1,445 @@
+.scroll_btn {
+  z-index: 999;
+  position: fixed;
+  bottom: 50px;
+  right: 80px;
+}
+.scroll_btn > .scroll_img {
+}
+.scroll_btn > .scroll_img > img {
+  display: block;
+  width: 250px;
+}
+.scroll_text > a {
+  position: absolute;
+}
+.scroll_text > .bt1 {
+  top: 55px;
+  left: 62px;
+  font-family: "yg-jalnan";
+  font-size: 20px;
+  color: #402727;
+}
+.scroll_text > .bt2 {
+  font-family: "yg-jalnan";
+  font-size: 20px;
+  color: #402727;
+  top: 70px;
+  right: 23px;
+}
+.scroll_text > .bt3 {
+  font-family: "yg-jalnan";
+  font-size: 20px;
+  color: #402727;
+  top: 140px;
+  left: 20px;
+}
+
+.scroll_text > .bt4 {
+  font-family: "yg-jalnan";
+  font-size: 20px;
+  color: #402727;
+  top: 145px;
+  right: 60px;
+}
+
+header {
+  height: 100px;
+  border-bottom: 1px solid #5555552b;
+  padding-top: 30px;
+}
+header > .boxalign {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+ul.head_left_icon {
+  display: flex;
+}
+
+ul.head_left_icon > li + li {
+  margin-left: 20px;
+}
+
+ul.head_left_icon > li > a {
+  display: block;
+  width: 40px;
+}
+h1.logo {
+}
+h1.logo > a {
+}
+h1.logo > a > img {
+  display: block;
+  width: 80px;
+}
+ul.head_right_icon {
+  display: flex;
+}
+
+ul.head_right_icon > li + li {
+  margin-left: 20px;
+}
+ul.head_right_icon > li:nth-child(1) {
+  padding-top: 5px;
+  font-family: "yg-jalnan";
+}
+ul.head_right_icon > li:nth-child(1) > a > strong {
+  font-size: 20px;
+}
+ul.head_right_icon > li:nth-child(1) {
+  font-size: 18px;
+  font-family: "Noto Sans KR", sans-serif;
+  color: rgb(64, 64, 64);
+}
+ul.head_right_icon > li > a {
+}
+
+.basket_icon > a {
+  display: block;
+  width: 40px;
+}
+.search_icon > a {
+  display: block;
+  width: 40px;
+}
+
+nav {
+  line-height: 80px;
+  height: 80px;
+  background: #ffffff;
+  color: rgb(46, 46, 46);
+  font-size: 18px;
+  position: relative;
+}
+nav ul.main_nav {
+  font-family: "yg-jalnan";
+  display: flex;
+  justify-content: space-between;
+}
+
+nav ul.main_nav > li > a {
+  display: block;
+  text-align: center;
+  width: 200px;
+}
+nav ul.main_nav > li:nth-child(1) {
+  color: #eb6ea5;
+  /* position: relative; */
+  /* padding-right: 30px; */
+}
+.sub_nav {
+  position: absolute;
+  color: black;
+  line-height: 40px;
+  left: 0;
+  border-bottom: 1px solid #ff4b4b15;
+  width: 100%;
+  display: none;
+  z-index: 2;
+  background: #fff;
+  box-shadow: 0px 10px 20px #d5d5d55f;
+}
+.sub_nav > ul {
+  width: 1200px;
+  font-size: 16px;
+  display: flex;
+  justify-content: space-between;
+  height: 250px;
+  text-align: center;
+}
+
+.sub_nav > ul > li > a.sub_nav_img {
+  display: block;
+  background: url(../image/1746498851.png) no-repeat center;
+  background-size: contain;
+  width: 200px;
+  margin: 0 auto;
+  height: 253px;
+  transition: 1s;
+}
+
+.main_nav > li.active .sub_nav {
+  /* width: 1140px; */
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  /* position: absolute; */
+}
+.sub_nav > ul > li + li > a {
+  font-family: "Noto Sans KR", sans-serif;
+  font-weight: bold;
+  display: flex;
+  width: 200px;
+  justify-content: center;
+}
+
+.sub_nav_sub > ul > li > a {
+  font-family: "Noto Sans KR", sans-serif;
+  text-align: center;
+}
+.sub_nav > ul > li > a:hover {
+  color: #eb6ea5;
+}
+.sub_nav_sub > ul > li > a:hover {
+  color: #eb6ea5;
+}
+
+.login-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.login-box img {
+  margin-right: 50px;
+  width: 500px;
+  height: auto;
+}
+
+@font-face {
+  font-family: "yg-jalnan";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_four@1.2/JalnanOTF00.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@import url(//fonts.googleapis.com/earlyaccess/notosanskr.css);
+
+.notosanskr * {
+  font-family: "Noto Sans KR", sans-serif;
+}
+main {
+  width: 100%;
+  height: 100px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-top: 1px solid #eaeaea;
+  border-bottom: 1px solid #eaeaea;
+  text-align: center;
+}
+
+main h1 {
+  /* color, border and font styles */
+  color: #eb6ea5;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 20px;
+  font-family: "yg-jalnan", sans-serif;
+}
+.login-box {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(255, 255, 255, 0.7);
+  border-radius: 5px;
+}
+.reset-button {
+  margin-top: 5px;
+  font-family: "Noto Sans KR", sans-serif;
+  cursor: pointer;
+}
+.slash {
+  pointer-events: none;
+}
+
+form h2 {
+  color: #eb6ea5;
+  font-size: 15px;
+  font-family: "yg-jalnan", sans-serif;
+  width: 300px;
+  margin: 5px auto 9px;
+  text-align: left;
+}
+.login-box form {
+  text-align: center;
+}
+input#password {
+  margin-bottom: 30px;
+}
+.passw {
+  display: flex;
+  flex-direction: column;
+}
+
+.login_button_els {
+  display: flex;
+  flex-direction: column;
+}
+
+.styled-input:first-child {
+  margin-bottom: 20px;
+}
+.loginbox_buttons {
+  background-color: #eaeaea;
+  width: 550px;
+  height: 550px;
+  padding-top: 50px;
+  border-radius: 50px;
+}
+#username {
+  margin-bottom: 20px;
+}
+.login_button_els > a {
+  display: block;
+  margin: 0 auto;
+}
+.button-group {
+  text-align: center;
+}
+.styled-input {
+  width: 300px;
+  height: 50px;
+  padding: 10px 20px;
+  font-size: 15px;
+  color: #eb6ea5;
+  border: 1px solid;
+  border-radius: 30px;
+  font-family: "yg-jalnan", sans-serif;
+  margin: 0 auto;
+}
+/* 기본 버튼 스타일 */
+.styled-button {
+  margin-left: auto;
+  margin-right: auto;
+  width: 200px;
+  height: 45px;
+  margin-bottom: 15px;
+  padding: 10px 20px;
+  font-size: 15px;
+  background-color: #eaeaea;
+  border: none;
+  border-radius: 30px;
+  font-family: "yg-jalnan", sans-serif;
+  cursor: pointer;
+}
+/* 버튼 호버 효과*/
+.styled-button:hover {
+  background-color: #cccccc;
+}
+/* 로그인 버튼 스타일*/
+.login-button {
+  background-color: #eb6ea5;
+  color: white;
+  width: 300px;
+  height: 50px;
+}
+/* 회원가입 버튼 스타일*/
+.signup-button {
+  background-color: rgb(84, 80, 80);
+  color: white;
+  width: 300px;
+  height: 50px;
+}
+.kakao-login {
+  background-color: #fee500;
+  color: #000000 85%;
+  width: 300px;
+  height: 50px;
+}
+
+footer {
+  height: 350px;
+  background: #f1f1f1;
+  padding-top: 60px;
+}
+.sns > a > img {
+  width: 30px;
+}
+.sns > a + a {
+  margin-left: 10px;
+  padding-top: 60px;
+}
+
+.footer_logo {
+  display: flex;
+  font-size: 30px;
+
+  font-weight: 500;
+  color: #595959;
+}
+.footer_logo > div {
+  font-family: "yg-jalnan";
+  margin-top: 15px;
+  margin-bottom: 10px;
+}
+.footer_logo > a > img {
+  width: 50px;
+  margin-top: 25px;
+  margin-right: 10px;
+}
+.footer_nav > ul {
+  display: flex;
+  gap: 30px;
+  font-size: 18px;
+  color: #919191;
+  font-weight: 500;
+}
+.footer_nav > ul > li:hover {
+  color: #363636;
+}
+.copyright {
+  color: #919191;
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+.copyright > div > p {
+  margin-top: 15px;
+}
+section {
+  height: 800px;
+}
+/* search_page */
+.search_page {
+  display: none;
+}
+.search_page.active {
+  position: fixed;
+  z-index: 999;
+  width: 100vw;
+  height: 100vh;
+  background: #0000008a;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  font-family: "yg-jalnan";
+}
+
+.search_page > input {
+  text-align: center;
+  display: block;
+  width: 600px;
+  height: 80px;
+  border-radius: 80px;
+  border: none;
+  font-family: "yg-jalnan";
+}
+.search01 {
+  font-family: "yg-jalnan";
+  width: 200px;
+  height: 80px;
+  border-radius: 80px;
+  background-color: #eb6ea5;
+  color: white;
+  font-size: 20px;
+}
+.close {
+  position: absolute;
+  font-size: 100px;
+  color: white;
+  display: block;
+  width: 100px;
+  line-height: 100px;
+  text-align: center;
+  background-color: #eb6ea5;
+  border-radius: 50%;
+  bottom: 100px;
+}
+.close:hover {
+  background-color: #eb6ea4c7;
+}
