@@ -78,17 +78,35 @@ document.getElementById("birthdate").addEventListener("input", function(event) {
 });
 
 // 비밀번호 확인 일치 여부 표시
-passwordConfirmInput.addEventListener("input", function(event) {
-    var passwordValue = passwordInput.value;
-    var passwordConfirmValue = event.target.value;
+//passwordConfirmInput.addEventListener("input", function(event) {
+//    var passwordValue = passwordInput.value;
+//    var passwordConfirmValue = event.target.value;
+//
+//    if (passwordValue === passwordConfirmValue) {
+//        event.target.style.backgroundColor = "#C4FFC1"; // 일치하면 초록색으로 변경
+//        setTimeout(function() {
+//            event.target.style.backgroundColor = ""; // 일치한 후 1초 뒤에 원래 색상으로 복원
+//        }, 1000);
+//    } else {
+//        event.target.style.backgroundColor = ""; // 불일치 시 원래 색상으로 복원
+//
+//    }
+//});
+passwordConfirmInput.addEventListener("keyup", function(event) {
+    var passwordValue = passwordInput.value.trim();
+    var passwordConfirmValue = event.target.value.trim();
+    var message = document.getElementById("message_error");
 
     if (passwordValue === passwordConfirmValue) {
-        event.target.style.backgroundColor = "#C4FFC1"; // 일치하면 초록색으로 변경
+        event.target.style.backgroundColor = "#C4FFC1"; // 비밀번호가 일치하면 배경색을 초록색으로 설정합니다.
         setTimeout(function() {
-            event.target.style.backgroundColor = ""; // 일치한 후 1초 뒤에 원래 색상으로 복원
-        }, 1000);
+            event.target.style.backgroundColor = ""; // 1초 후 원래 배경색으로 복원합니다.
+            message.style.display = "none"; // 일치하면 오류 메시지를 숨깁니다.
+        }, 500);
     } else {
-        event.target.style.backgroundColor = ""; // 불일치 시 원래 색상으로 복원
+        event.target.style.backgroundColor = ""; // 배경색 초기화
+        message.style.display = "block";
+        message.innerText = "비밀번호가 일치하지 않음"; // 비밀번호가 일치하지 않을 때 오류 메시지를 표시합니다.
     }
 });
 
@@ -136,6 +154,27 @@ btnJoin.onclick = function () {
     var name = document.getElementById("name").value;
     var birth = document.getElementById("birthdate").value;
     var phoneNumber = document.getElementById("phoneNumber").value;
+ // 입력 필드가 하나라도 비어있는지 확인
+ if (
+     !password ||
+     !username ||
+     !name ||
+     !birth ||
+     !phoneNumber
+ ) {
+     alert("회원정보 필드를 입력하세요.");
+     return; // 하나라도 비어있으면 가입을 막음
+ } else if (
+     !postNumber ||
+     !address ||
+     !extraAddress ||
+     !detailAddress ||
+     !emailInput ||
+     !emailSelect
+ ) {
+     alert("개인정보 필드를 입력하세요.");
+     return; // 하나라도 비어있으면 가입을 막음
+ }
 
     // 주소합병
     var fullAddress = postNumber + " " + address + " " + extraAddress + " " + detailAddress;
